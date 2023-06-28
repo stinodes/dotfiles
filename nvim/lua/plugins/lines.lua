@@ -27,6 +27,10 @@ local function bufferline()
 end
 M.bufferline = bufferline
 
+local function session_name()
+    return require("possession.session").session_name or ""
+end
+
 local function lualine()
     local ll = require("lualine")
     ll.setup({
@@ -50,8 +54,9 @@ local function lualine()
             },
             lualine_b = {
                 { "branch" },
-                { "filename" },
                 { "diff" },
+                { session_name, color = { gui = "bold" } },
+                { "filename" },
             },
             lualine_c = {
                 { "diagnostics" },
