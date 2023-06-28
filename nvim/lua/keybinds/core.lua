@@ -26,6 +26,10 @@ local bindings = {
     ["<S-h>"] = { ":BufferLineCyclePrev<Cr>", "Cycle to next buffer" },
     ["<leader>d"] = { ":Bdelete<cr>", "Close buffer" },
     ["<leader>D"] = { ":bufdo :Bdelete<cr>", "Close all buffers" },
+
+    ["<C-/>"] = { "<Plug>(comment_toggle_linewise_visual)", "Toggle comment block", "v" },
+
+    ["<leader>sw"] = { ":PossessionSave", "Save session" },
 }
 
 map_table(bindings, nil, "")
