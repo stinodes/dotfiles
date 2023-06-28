@@ -16,3 +16,8 @@ Execute the script in a bash shell to be notified to install `zsh` instead.
 OMZ, you might need to rerun the script.
 
 Run `PackerInstall` in NeoVim after the linking process has completed.
+
+**Note:** the following automatic install scripts might only work for Debian-based systems, as they use `apt`:
+
+- Nvim
+- Git
