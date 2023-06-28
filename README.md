@@ -1,9 +1,9 @@
 # Dotfiles
 
-[- Setup](#setup)
-[- Examples](#examples)
-[- Plugins](#plugins)
-[- Customizations](#customizations)
+[- Setup](#setup)  
+[- Examples](#examples)  
+[- Plugins](#plugins)  
+[- Customizations](#customizations)  
 [- Keybinds](#Keybinds)
 
 Set of dotfiles, making up my unified development suite, themed with Catppuccin.
