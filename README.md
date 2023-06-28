@@ -84,7 +84,7 @@ All language features are LSP-powered.
 
 There are several (obviously) opinionated customizations implemented, outside of keybinds and plugin expectations.
 
-- **<leader> is set to <space>!**
+- **`<leader>` is set to `<space>`!**
 - Kitty margins are turned off when Nvim is running
 - File references get updated after changing a file (LSP file operations + Nvim Tree)
 - Lualine shows session name left of filename
