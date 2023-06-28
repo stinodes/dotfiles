@@ -9,7 +9,7 @@ if not status_ok then
     return
 end
 
-return require("packer").startup({
+return packer.startup({
     function(use)
         -- Package Manager --
         use("wbthomason/packer.nvim")

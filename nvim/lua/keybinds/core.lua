@@ -14,6 +14,11 @@ local bindings = {
     ["<leader>q"] = { ":q<CR>", "Close window" },
     ["<leader>Q"] = { ":q!<CR>", "Force close window" },
 
+    ["<S-l>"] = { ":BufferLineCycleNext<Cr>", "Cycle to next buffer" },
+    ["<S-h>"] = { ":BufferLineCyclePrev<Cr>", "Cycle to next buffer" },
+    ["<leader>d"] = { ":Bdelete<cr>", "Close buffer" },
+    ["<leader>D"] = { ":bufdo :Bdelete<cr>", "Close all buffers" },
+
     ["<leader>p"] = { '"_dP', "Paste without yank" },
 
     ["<leader>y"] = { '"+y', "Yank and copy to clipboard", { "n", "v" } },
@@ -21,11 +26,6 @@ local bindings = {
 
     ["<C-j>"] = { ":move .+1<CR>", "Move line up" },
     ["<C-k>"] = { ":move .-2<CR>", "Move line up" },
-
-    ["<S-l>"] = { ":BufferLineCycleNext<Cr>", "Cycle to next buffer" },
-    ["<S-h>"] = { ":BufferLineCyclePrev<Cr>", "Cycle to next buffer" },
-    ["<leader>d"] = { ":Bdelete<cr>", "Close buffer" },
-    ["<leader>D"] = { ":bufdo :Bdelete<cr>", "Close all buffers" },
 
     ["<C-/>"] = { "<Plug>(comment_toggle_linewise_visual)", "Toggle comment block", "v" },
 
