@@ -1,10 +1,12 @@
 # Dotfiles
 
-[- Setup](#setup)  
-[- Examples](#examples)  
-[- Plugins](#plugins)  
-[- Customizations](#customizations)  
-[- Keybinds](#Keybinds)
+<img alt="Starter screen using alpha" src="examples/Alpha.png" width="66%" style="display: block; margin: auto;">
+
+[**1) Setup**](#setup)  
+[**2) Examples**](#examples)  
+[**3) Plugins**](#plugins)  
+[**4) Customizations**](#customizations)  
+[**5) Keybinds**](#Keybinds)
 
 Set of dotfiles, making up my unified development suite, themed with Catppuccin.
 **Included configs:**
@@ -30,17 +32,10 @@ Run `PackerInstall` in NeoVim after the linking process has completed.
 
 ## Examples
 
-Starter screen using alpha
-![Starter screen using alpha](examples/Alpha.png)
-
-General layout and look
-![General layout and look](examples/Look.png)
-
-Telescope as a finder and selector
-![Telescope as a finder and selector](examples/Telescope.png)
-
-Code actions with previews and diffs
-![Code actions with previews and diffs](examples/CodeActions.png)
+<img alt="Starter screen using alpha" src="examples/Alpha.png" width="49%" >
+<img alt="General layout and look" src="examples/Look.png" width="49%" >
+<img alt="Telescope as a finder" src="examples/Telescope.png" width="49%" >
+<img alt="Code actions" src="examples/CodeActions.png" width="49%" >
 
 ## Plugins
 
