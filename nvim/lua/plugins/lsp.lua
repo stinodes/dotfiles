@@ -14,11 +14,12 @@ local keybinds = require("keybinds.lsp")
 
 lsp.preset("recommended")
 
-lsp.on_attach(function(client, bufnr)
+local on_attach = function(client, bufnr)
     lsp.default_keymaps({ buffer = bufnr })
 
     keybinds.on_attach(bufnr)
-end)
+end
+lsp.on_attach(on_attach)
 
 lsp.format_on_save({
     format_opts = {
@@ -30,6 +31,28 @@ lsp.format_on_save({
 })
 
 lsp.setup()
+
+require("lspconfig").gdscript.setup({
+    on_attach = on_attach,
+    flags = {
+        debounce_text_changes = 150,
+    },
+})
+require("lspconfig").efm.setup({
+    on_attach = on_attach,
+    flags = {
+        debounce_text_changes = 150,
+    },
+    init_options = { documentFormatting = true },
+    settings = {
+        rootMarkers = { ".dogot/" },
+        languages = {
+            gdscript = {
+                { formatCommand = "gdformat -l 80 -", formatStdin = true },
+            },
+        },
+    },
+})
 
 local cmp = require("cmp")
 require("luasnip.loaders.from_vscode").lazy_load()

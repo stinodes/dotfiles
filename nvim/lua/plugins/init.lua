@@ -74,8 +74,8 @@ return packer.startup({
             config = function()
                 require("plugins.telescope")
             end,
-            tag = "0.1.1",
-            -- or                            , branch = '0.1.x',
+            -- tag = "0.1.1",
+            branch = "0.1.x",
             requires = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope-ui-select.nvim" },
         })
         -- Which key
@@ -102,7 +102,7 @@ return packer.startup({
         })
         use({
             "akinsho/bufferline.nvim",
-            tag = "v2.*",
+            tag = "*",
             config = function()
                 require("plugins.lines").bufferline()
             end,
@@ -193,7 +193,7 @@ return packer.startup({
         use({
             "lukas-reineke/indent-blankline.nvim",
             config = function()
-                require("indent_blankline").setup()
+                require("ibl").setup()
             end,
         })
         use({
