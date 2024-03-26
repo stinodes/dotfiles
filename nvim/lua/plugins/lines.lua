@@ -5,7 +5,7 @@ local function bufferline()
 
     bl.setup({
         options = {
-            highlights = require("catppuccin.groups.integrations.bufferline").get(),
+            -- highlights = require("catppuccin.groups.integrations.bufferline").get(),
             offsets = {
                 { filetype = "NvimTree", text = "", padding = 1 },
                 { filetype = "Outline",  text = "", padding = 1 },
@@ -35,8 +35,6 @@ local function lualine()
     local ll = require("lualine")
     ll.setup({
         options = {
-            theme = "catppuccin",
-
             component_separators = "|",
             section_separators = { left = "", right = "" },
 
