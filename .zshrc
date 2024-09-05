@@ -19,3 +19,8 @@ alias python='python3'
 # Set name of the theme to load
 eval "$(starship init zsh)"
 
+alias protontricks='flatpak run com.github.Matoking.protontricks'
+alias protontricks-launch='flatpak run --command=protontricks-launch com.github.Matoking.protontricks'
+alias spotify='spotify_player'
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/go/bin
