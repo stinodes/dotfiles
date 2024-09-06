@@ -18,4 +18,5 @@ alias python='python3'
 
 # Set name of the theme to load
 eval "$(starship init zsh)"
+export PATH=$HOME/.local/bin:$PATH
 
