@@ -20,3 +20,8 @@ alias python='python3'
 eval "$(starship init zsh)"
 export PATH=$HOME/.local/bin:$PATH
 
+alias protontricks='flatpak run com.github.Matoking.protontricks'
+alias protontricks-launch='flatpak run --command=protontricks-launch com.github.Matoking.protontricks'
+alias spotify='spotify_player'
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$HOME/go/bin
