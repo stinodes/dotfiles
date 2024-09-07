@@ -8,7 +8,7 @@ end, { bang = true, nargs = "+" })
 local bindings = {
 	["<leader>tt"] = { fterm.toggle, "Toggle floating term", { "n", "t" } },
 	["<leader>ts"] = { ":Scratch ", "Run a scratch command" },
-	["<leader>tdu"] = { ":Scratch docker-compose up -d<CR>", "Run docker-compose up" },
+	["<leader>tdu"] = { ":Scratch \"docker-compose up -d<CR>\"", "Run docker-compose up" },
 	["<leader>tdd"] = { ":Scratch docker-compose down<CR>", "Run docker-compose down" },
 }
 

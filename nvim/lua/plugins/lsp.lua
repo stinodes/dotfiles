@@ -1,3 +1,7 @@
+
+local lsp = require("lsp-zero")
+lsp.extend_lspconfig()
+
 require("mason").setup({
 	ui = {
 		border = "rounded",
@@ -44,7 +48,6 @@ require("mason-lspconfig").setup({
 	},
 })
 
-local lsp = require("lsp-zero")
 local keybinds = require("keybinds.lsp")
 
 lsp.preset("recommended")

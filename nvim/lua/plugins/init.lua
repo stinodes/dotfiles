@@ -58,7 +58,10 @@ return packer.startup({
             config = function()
                 require("plugins.alpha")
             end,
-            requires = { "nvim-tree/nvim-web-devicons", "jedrzejboczar/possession.nvim" },
+            requires = { 
+                "nvim-tree/nvim-web-devicons", 
+                -- "jedrzejboczar/possession.nvim" 
+            },
         })
         -- File Manager
         use({
