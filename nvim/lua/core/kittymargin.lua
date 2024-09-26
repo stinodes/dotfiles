@@ -4,7 +4,7 @@ vim.api.nvim_create_autocmd("VimLeave", {
     pattern = "*",
     group = augroup,
     callback = function()
-        vim.system({ "kitty", "@", "set-spacing", "padding=10", "margin=10" })
+        vim.system({ "kitty", "@", "set-spacing", "padding=10", "margin=0" })
     end,
 })
 
