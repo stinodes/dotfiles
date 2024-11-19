@@ -1,3 +1,19 @@
+local lsp = require("lsp-zero")
+local keybinds = require("keybinds.lsp")
+
+lsp.preset("recommended")
+
+local on_attach = function(client, bufnr)
+    lsp.default_keymaps({ buffer = bufnr })
+
+    lsp.buffer_autoformat()
+    keybinds.on_attach(bufnr)
+end
+
+lsp.on_attach(on_attach)
+
+lsp.setup()
+
 require("mason").setup({
     ui = {
         border = "rounded",
@@ -43,22 +59,6 @@ require("mason-lspconfig").setup({
         end,
     },
 })
-
-local lsp = require("lsp-zero")
-local keybinds = require("keybinds.lsp")
-
-lsp.preset("recommended")
-
-local on_attach = function(client, bufnr)
-    lsp.default_keymaps({ buffer = bufnr })
-
-    lsp.buffer_autoformat()
-    keybinds.on_attach(bufnr)
-end
-
-lsp.on_attach(on_attach)
-
-lsp.setup()
 
 local cmp = require("cmp")
 require("luasnip.loaders.from_vscode").lazy_load()
