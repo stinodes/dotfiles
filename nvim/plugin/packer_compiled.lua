@@ -258,6 +258,12 @@ _G.packer_plugins = {
     path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/possession.nvim",
     url = "https://github.com/jedrzejboczar/possession.nvim"
   },
+  ["supermaven-nvim"] = {
+    config = { "\27LJ\2\2˜\1\0\0\3\0\6\0\t6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\4\0005\2\3\0=\2\5\1B\0\2\1K\0\1\0\fkeymaps\1\0\0\1\0\3\16accept_word\n<C-w>\21clear_suggestion\n<C-x>\22accept_suggestion\n<C-s>\nsetup\20supermaven-nvim\frequire\0" },
+    loaded = true,
+    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/supermaven-nvim",
+    url = "https://github.com/supermaven-inc/supermaven-nvim"
+  },
   ["telescope-ui-select.nvim"] = {
     loaded = true,
     path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/telescope-ui-select.nvim",
