@@ -15,7 +15,6 @@ local bindings = {
     ["<leader>gT"] = { builtin.treesitter, "Show treesitter symbols" },
     ["<leader>gi"] = { builtin.lsp_implementations, "Show implementations" },
 
-    ["<leader>sl"] = { ":Telescope possession list<CR>", "Sessions" },
 }
 
 map_table(bindings, nil, "Telescope: ")

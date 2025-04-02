@@ -58,7 +58,7 @@ return packer.startup({
             config = function()
                 require("plugins.alpha")
             end,
-            requires = { "nvim-tree/nvim-web-devicons", "jedrzejboczar/possession.nvim" },
+            requires = { "nvim-tree/nvim-web-devicons", "shatur/neovim-session-manager" },
         })
         -- File Manager
         use({
@@ -166,6 +166,7 @@ return packer.startup({
                         accept_word = "<C-w>",
                         clear_suggestion = "<C-x>",
                     },
+                    ignore_filetypes = { "log" },
                 })
             end,
         })

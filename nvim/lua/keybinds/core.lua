@@ -29,7 +29,11 @@ local bindings = {
 
     ["<C-/>"] = { "<Plug>(comment_toggle_linewise_visual)", "Toggle comment block", "v" },
 
-    ["<leader>sw"] = { ":PossessionSave", "Save session" },
+    ["<leader>sl"] = { function() require('nvim-possession').list() end, "List sessions" },
+    ["<leader>su"] = { function() require('nvim-possession').update() end, "Update session" },
+    ["<leader>sn"] = { function() require('nvim-possession').new() end, "Create session" },
+    ["<leader>sa"] = { function() require('nvim-possession').new() end, "Create session" },
+    ["<leader>sd"] = { function() require('nvim-possession').delete() end, "Delete session" },
 }
 
 map_table(bindings, nil, "")
