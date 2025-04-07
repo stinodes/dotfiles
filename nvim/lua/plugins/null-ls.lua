@@ -12,7 +12,7 @@ null_ls.setup({
         formatting.sqlfluff.with({
             extra_args = { "--dialect", "postgres" },
         }),
-        formatting.stylua,
+        -- formatting.stylua,
         formatting.tidy,
 
         diagnostics.tidy,

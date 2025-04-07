@@ -166,6 +166,7 @@ return packer.startup({
                         accept_word = "<C-w>",
                         clear_suggestion = "<C-x>",
                     },
+                    ignore_filetypes = { "log" },
                 })
             end,
         })

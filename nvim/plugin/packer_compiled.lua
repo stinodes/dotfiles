@@ -178,6 +178,11 @@ _G.packer_plugins = {
     path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["neovim-session-manager"] = {
+    loaded = true,
+    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/neovim-session-manager",
+    url = "https://github.com/shatur/neovim-session-manager"
+  },
   ["noice.nvim"] = {
     config = { "\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nnoice\frequire\0" },
     loaded = true,
