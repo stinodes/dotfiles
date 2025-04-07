@@ -222,6 +222,15 @@ return packer.startup({
             end,
         })
 
+        -- WOW
+        use({
+            'tyrannican/warcraft-api.nvim',
+            config = function()
+                require("warcraft-api").setup()
+            end,
+            requires = { { 'nvim-lua/plenary.nvim' } }
+        })
+
         -- QOF
         use({
             "numToStr/Comment.nvim",

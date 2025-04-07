@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/stinodes/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?.lua;/home/stinodes/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?/init.lua;/home/stinodes/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?.lua;/home/stinodes/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/stinodes/.cache/nvim/packer_hererocks/2.1.1703358377/lib/lua/5.1/?.so"
+local package_path_str = "/Users/stinodes/.cache/nvim/packer_hererocks/2.1.1736781742/share/lua/5.1/?.lua;/Users/stinodes/.cache/nvim/packer_hererocks/2.1.1736781742/share/lua/5.1/?/init.lua;/Users/stinodes/.cache/nvim/packer_hererocks/2.1.1736781742/lib/luarocks/rocks-5.1/?.lua;/Users/stinodes/.cache/nvim/packer_hererocks/2.1.1736781742/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/stinodes/.cache/nvim/packer_hererocks/2.1.1736781742/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -77,46 +77,46 @@ _G.packer_plugins = {
   ["Comment.nvim"] = {
     config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0" },
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
   ["FTerm.nvim"] = {
     config = { "\27LJ\2\n.\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\19keybinds.fterm\frequire\0" },
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/FTerm.nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/FTerm.nvim",
     url = "https://github.com/numToStr/FTerm.nvim"
   },
   LuaSnip = {
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   ["alpha-nvim"] = {
     config = { "\27LJ\2\n-\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\18plugins.alpha\frequire\0" },
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/alpha-nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/alpha-nvim",
     url = "https://github.com/goolord/alpha-nvim"
   },
   ["better-escape.nvim"] = {
-    config = { "\27LJ\2\nY\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\fmapping\1\0\0\1\2\0\0\ajk\nsetup\18better_escape\frequire\0" },
+    config = { "\27LJ\2\nb\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\fmapping\1\0\1\fmapping\0\1\2\0\0\ajk\nsetup\18better_escape\frequire\0" },
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/better-escape.nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/better-escape.nvim",
     url = "https://github.com/max397574/better-escape.nvim"
   },
   ["bufferline.nvim"] = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\15bufferline\18plugins.lines\frequire\0" },
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
   cmp_luasnip = {
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
   ["fidget.nvim"] = {
@@ -126,30 +126,30 @@ _G.packer_plugins = {
     },
     loaded = false,
     needs_bufread = false,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/opt/fidget.nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/opt/fidget.nvim",
     url = "https://github.com/j-hui/fidget.nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
   ["github-nvim-theme"] = {
     config = { "\27LJ\2\nv\0\0\3\0\6\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\0016\0\3\0009\0\4\0'\2\5\0B\0\2\1K\0\1\0$colorscheme github_dark_default\bcmd\bvim\nsetup\17github-theme\frequire\0" },
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
     url = "https://github.com/projekt0n/github-nvim-theme"
   },
   ["indent-blankline.nvim"] = {
     config = { "\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\bibl\frequire\0" },
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["lsp-zero.nvim"] = {
     config = { "\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16plugins.lsp\frequire\0" },
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
   ["lualine.nvim"] = {
@@ -158,51 +158,46 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/opt/lualine.nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/opt/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["markdown-preview.nvim"] = {
     loaded = false,
     needs_bufread = false,
     only_cond = false,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
     url = "https://github.com/williamboman/mason-lspconfig.nvim"
   },
   ["mason.nvim"] = {
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
-  },
-  ["neovim-session-manager"] = {
-    loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/neovim-session-manager",
-    url = "https://github.com/shatur/neovim-session-manager"
   },
   ["noice.nvim"] = {
     config = { "\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nnoice\frequire\0" },
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/noice.nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/noice.nvim",
     url = "https://github.com/folke/noice.nvim"
   },
   ["none-ls.nvim"] = {
     config = { "\27LJ\2\n/\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\20plugins.null-ls\frequire\0" },
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/none-ls.nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/none-ls.nvim",
     url = "https://github.com/nvimtools/none-ls.nvim"
   },
   ["nui.nvim"] = {
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/nui.nvim",
     url = "https://github.com/MunifTanjim/nui.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
   ["nvim-code-action-menu"] = {
@@ -210,80 +205,86 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = true,
     only_cond = false,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/opt/nvim-code-action-menu",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/opt/nvim-code-action-menu",
     url = "https://github.com/weilbith/nvim-code-action-menu"
   },
   ["nvim-colorizer.lua"] = {
     config = { "\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0" },
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
     url = "https://github.com/norcalli/nvim-colorizer.lua"
   },
   ["nvim-lsp-file-operations"] = {
     config = { "\27LJ\2\nA\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\24lsp-file-operations\frequire\0" },
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/nvim-lsp-file-operations",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/nvim-lsp-file-operations",
     url = "https://github.com/antosha417/nvim-lsp-file-operations"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-tree.lua"] = {
-    config = { "\27LJ\2\nâ\1\0\0\6\0\a\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\3\0B\0\2\0029\0\4\0005\2\6\0006\3\0\0'\5\1\0B\3\2\0029\3\5\3=\3\5\2B\0\2\1K\0\1\0\1\0\0\14on_attach\nsetup\14nvim-tree\vglobal\22keybinds.nvimtree\frequire\0" },
+    config = { "\27LJ\2\nî\1\0\0\6\0\a\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\3\0B\0\2\0029\0\4\0005\2\6\0006\3\0\0'\5\1\0B\3\2\0029\3\5\3=\3\5\2B\0\2\1K\0\1\0\1\0\1\14on_attach\0\14on_attach\nsetup\14nvim-tree\vglobal\22keybinds.nvimtree\frequire\0" },
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/nvim-tree/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
-    config = { "\27LJ\2\në\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\14highlight\1\0\1\venable\2\vindent\1\0\1\venable\2\1\0\1\17auto_install\2\nsetup\28nvim-treesitter.configs\frequire\0" },
+    config = { "\27LJ\2\n§\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\14highlight\1\0\1\venable\2\vindent\1\0\1\venable\2\1\0\3\vindent\0\14highlight\0\17auto_install\2\nsetup\28nvim-treesitter.configs\frequire\0" },
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     config = { "\27LJ\2\n?\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\22nvim-web-devicons\frequire\0" },
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["supermaven-nvim"] = {
-    config = { "\27LJ\2\nò\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\fkeymaps\1\0\0\1\0\3\22accept_suggestion\n<C-s>\21clear_suggestion\n<C-x>\16accept_word\n<C-w>\nsetup\20supermaven-nvim\frequire\0" },
+    config = { "\27LJ\2\n‘\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\21ignore_filetypes\1\2\0\0\blog\fkeymaps\1\0\2\21ignore_filetypes\0\fkeymaps\0\1\0\3\16accept_word\n<C-w>\21clear_suggestion\n<C-x>\22accept_suggestion\n<C-s>\nsetup\20supermaven-nvim\frequire\0" },
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/supermaven-nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/supermaven-nvim",
     url = "https://github.com/supermaven-inc/supermaven-nvim"
   },
   ["telescope-ui-select.nvim"] = {
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/telescope-ui-select.nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/telescope-ui-select.nvim",
     url = "https://github.com/nvim-telescope/telescope-ui-select.nvim"
   },
   ["telescope.nvim"] = {
     config = { "\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22plugins.telescope\frequire\0" },
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["vim-bbye"] = {
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/vim-bbye",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
+  },
+  ["warcraft-api.nvim"] = {
+    config = { "\27LJ\2\n:\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\17warcraft-api\frequire\0" },
+    loaded = true,
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/warcraft-api.nvim",
+    url = "https://github.com/tyrannican/warcraft-api.nvim"
   },
   ["which-key.nvim"] = {
     config = { "\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14which-key\frequire\0" },
     loaded = true,
-    path = "/home/stinodes/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    path = "/Users/stinodes/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
   }
 }
@@ -293,22 +294,6 @@ time([[Defining packer_plugins]], false)
 time([[Setup for markdown-preview.nvim]], true)
 try_loadstring("\27LJ\2\n=\0\0\2\0\4\0\0056\0\0\0009\0\1\0005\1\3\0=\1\2\0K\0\1\0\1\2\0\0\rmarkdown\19mkdp_filetypes\6g\bvim\0", "setup", "markdown-preview.nvim")
 time([[Setup for markdown-preview.nvim]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
-time([[Config for which-key.nvim]], false)
--- Config for: nvim-web-devicons
-time([[Config for nvim-web-devicons]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\22nvim-web-devicons\frequire\0", "config", "nvim-web-devicons")
-time([[Config for nvim-web-devicons]], false)
--- Config for: noice.nvim
-time([[Config for noice.nvim]], true)
-try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nnoice\frequire\0", "config", "noice.nvim")
-time([[Config for noice.nvim]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-try_loadstring("\27LJ\2\në\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\14highlight\1\0\1\venable\2\vindent\1\0\1\venable\2\1\0\1\17auto_install\2\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")
-time([[Config for nvim-treesitter]], false)
 -- Config for: none-ls.nvim
 time([[Config for none-ls.nvim]], true)
 try_loadstring("\27LJ\2\n/\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\20plugins.null-ls\frequire\0", "config", "none-ls.nvim")
@@ -321,50 +306,70 @@ time([[Config for FTerm.nvim]], false)
 time([[Config for github-nvim-theme]], true)
 try_loadstring("\27LJ\2\nv\0\0\3\0\6\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\0016\0\3\0009\0\4\0'\2\5\0B\0\2\1K\0\1\0$colorscheme github_dark_default\bcmd\bvim\nsetup\17github-theme\frequire\0", "config", "github-nvim-theme")
 time([[Config for github-nvim-theme]], false)
+-- Config for: supermaven-nvim
+time([[Config for supermaven-nvim]], true)
+try_loadstring("\27LJ\2\n‘\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\21ignore_filetypes\1\2\0\0\blog\fkeymaps\1\0\2\21ignore_filetypes\0\fkeymaps\0\1\0\3\16accept_word\n<C-w>\21clear_suggestion\n<C-x>\22accept_suggestion\n<C-s>\nsetup\20supermaven-nvim\frequire\0", "config", "supermaven-nvim")
+time([[Config for supermaven-nvim]], false)
 -- Config for: indent-blankline.nvim
 time([[Config for indent-blankline.nvim]], true)
 try_loadstring("\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\bibl\frequire\0", "config", "indent-blankline.nvim")
 time([[Config for indent-blankline.nvim]], false)
--- Config for: supermaven-nvim
-time([[Config for supermaven-nvim]], true)
-try_loadstring("\27LJ\2\nò\1\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\fkeymaps\1\0\0\1\0\3\22accept_suggestion\n<C-s>\21clear_suggestion\n<C-x>\16accept_word\n<C-w>\nsetup\20supermaven-nvim\frequire\0", "config", "supermaven-nvim")
-time([[Config for supermaven-nvim]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-try_loadstring("\27LJ\2\nâ\1\0\0\6\0\a\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\3\0B\0\2\0029\0\4\0005\2\6\0006\3\0\0'\5\1\0B\3\2\0029\3\5\3=\3\5\2B\0\2\1K\0\1\0\1\0\0\14on_attach\nsetup\14nvim-tree\vglobal\22keybinds.nvimtree\frequire\0", "config", "nvim-tree.lua")
-time([[Config for nvim-tree.lua]], false)
+-- Config for: alpha-nvim
+time([[Config for alpha-nvim]], true)
+try_loadstring("\27LJ\2\n-\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\18plugins.alpha\frequire\0", "config", "alpha-nvim")
+time([[Config for alpha-nvim]], false)
 -- Config for: lsp-zero.nvim
 time([[Config for lsp-zero.nvim]], true)
 try_loadstring("\27LJ\2\n+\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\16plugins.lsp\frequire\0", "config", "lsp-zero.nvim")
 time([[Config for lsp-zero.nvim]], false)
 -- Config for: better-escape.nvim
 time([[Config for better-escape.nvim]], true)
-try_loadstring("\27LJ\2\nY\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\fmapping\1\0\0\1\2\0\0\ajk\nsetup\18better_escape\frequire\0", "config", "better-escape.nvim")
+try_loadstring("\27LJ\2\nb\0\0\4\0\6\0\t6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\2B\0\2\1K\0\1\0\fmapping\1\0\1\fmapping\0\1\2\0\0\ajk\nsetup\18better_escape\frequire\0", "config", "better-escape.nvim")
 time([[Config for better-escape.nvim]], false)
--- Config for: alpha-nvim
-time([[Config for alpha-nvim]], true)
-try_loadstring("\27LJ\2\n-\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\18plugins.alpha\frequire\0", "config", "alpha-nvim")
-time([[Config for alpha-nvim]], false)
 -- Config for: telescope.nvim
 time([[Config for telescope.nvim]], true)
 try_loadstring("\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22plugins.telescope\frequire\0", "config", "telescope.nvim")
 time([[Config for telescope.nvim]], false)
--- Config for: nvim-colorizer.lua
-time([[Config for nvim-colorizer.lua]], true)
-try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
-time([[Config for nvim-colorizer.lua]], false)
 -- Config for: bufferline.nvim
 time([[Config for bufferline.nvim]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\15bufferline\18plugins.lines\frequire\0", "config", "bufferline.nvim")
 time([[Config for bufferline.nvim]], false)
--- Config for: Comment.nvim
-time([[Config for Comment.nvim]], true)
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
-time([[Config for Comment.nvim]], false)
 -- Config for: nvim-lsp-file-operations
 time([[Config for nvim-lsp-file-operations]], true)
 try_loadstring("\27LJ\2\nA\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\24lsp-file-operations\frequire\0", "config", "nvim-lsp-file-operations")
 time([[Config for nvim-lsp-file-operations]], false)
+-- Config for: warcraft-api.nvim
+time([[Config for warcraft-api.nvim]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\17warcraft-api\frequire\0", "config", "warcraft-api.nvim")
+time([[Config for warcraft-api.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+try_loadstring("\27LJ\2\n§\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\14highlight\1\0\1\venable\2\vindent\1\0\1\venable\2\1\0\3\vindent\0\14highlight\0\17auto_install\2\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")
+time([[Config for nvim-treesitter]], false)
+-- Config for: nvim-web-devicons
+time([[Config for nvim-web-devicons]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\22nvim-web-devicons\frequire\0", "config", "nvim-web-devicons")
+time([[Config for nvim-web-devicons]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
+time([[Config for which-key.nvim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+try_loadstring("\27LJ\2\nî\1\0\0\6\0\a\0\0176\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\0\0'\2\3\0B\0\2\0029\0\4\0005\2\6\0006\3\0\0'\5\1\0B\3\2\0029\3\5\3=\3\5\2B\0\2\1K\0\1\0\1\0\1\14on_attach\0\14on_attach\nsetup\14nvim-tree\vglobal\22keybinds.nvimtree\frequire\0", "config", "nvim-tree.lua")
+time([[Config for nvim-tree.lua]], false)
+-- Config for: nvim-colorizer.lua
+time([[Config for nvim-colorizer.lua]], true)
+try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\14colorizer\frequire\0", "config", "nvim-colorizer.lua")
+time([[Config for nvim-colorizer.lua]], false)
+-- Config for: noice.nvim
+time([[Config for noice.nvim]], true)
+try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\nnoice\frequire\0", "config", "noice.nvim")
+time([[Config for noice.nvim]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
+time([[Config for Comment.nvim]], false)
 
 -- Command lazy-loads
 time([[Defining lazy-load commands]], true)
