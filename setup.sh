@@ -9,21 +9,29 @@ BYellow='\033[1;33m'      # Yellow
 BRed='\033[1;31m'         # Red
 BGreen='\033[1;32m'       # Green
 
-function git_install() {
-    sudo apt-get install -y git
+function command_exists() {
+    command -v "$1" >/dev/null 2>&1
 }
+
+PackageMan=[[command_exists apt]] && echo "apt" || echo "pacman"
+InstallCmd=[[command_exists apt]] && echo "apt install" || echo "pacman -S"
+
 function omz_install() {
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-    echo -e "${BGreen}Restart the script after OMZ has been installed!${Color_Off}"
+    echo -e "${BGreen}Restart the script after OMZ has been installed.${Color_Off}"
 }
+
 function starship_install() {
     curl -sS https://starship.rs/install.sh | sh
 }
+
 function nvim_install() {
-    sudo add-apt-repository ppa:neovim-ppa/unstable -y
-    sudo apt update
-    sudo apt-get install -y neovim
+    sudo "$InstallCmd" neovim
+}
+function kitty_install() {
+    curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin \
+        installer=nightly
 }
 
 function confirm() {
@@ -34,6 +42,13 @@ function confirm() {
         return 0
     else
         echo
+        install_or_exit $1 $2;
+    fi
+}
+function confirm_exists() {
+    if command_exists "$1"; then
+        return 0
+    else
         install_or_exit $1 $2;
     fi
 }
@@ -82,8 +97,9 @@ then
     echo -e "${BGreen}ZSH is installed. Ready to continue!${Color_Off}"
     echo
 else
-    echo -e "${BRed}ZSH ${Red}isn't installed.${Color_Off}"
-    echo -e "${Yellow}Please run '${BYellow}sudo apt-get install zsh' ${Yellow}and source this file from a ZSH-shell${Color_Off}"
+    echo -e "${BRed}ZSH ${Red}isn't installed.${Color_Off} Installing..."
+    sudo "$InstallCmd" zsh
+    echo -e "Source this file from a ZSH-shell${Color_Off}"
     exit 0
 fi
 
@@ -100,12 +116,11 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 echo "Dotfiles dir: $DIR"
 
-confirm 'Git' git_install
 confirm 'NF_FiraCode'
-confirm "Oh-my-zsh" omz_install
-confirm "Starship" starship_install
-confirm "Kitty"
-confirm "NeoVIM" nvim_install
+confirm_exists "omz" omz_install
+confirm_exists "Starship" starship_install
+confirm_exists "kitty" kitty_install
+confirm_exists "nvim" nvim_install
 
 if test -e ~/.config; then
 else
