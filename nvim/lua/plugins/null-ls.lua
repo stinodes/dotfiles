@@ -20,8 +20,10 @@ return {
                 }),
                 formatting.stylua,
                 formatting.tidy,
+                formatting.gofmt,
 
                 diagnostics.tidy,
+                diagnostics.gofmt,
                 diagnostics.selene,
 
                 require('none-ls.diagnostics.eslint_d'),

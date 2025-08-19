@@ -30,7 +30,7 @@ export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/.local/share/nvim/mason/bin/
 
 # pnpm
-export PNPM_HOME="/home/stinodes/.local/share/pnpm"
+export PNPM_HOME=$HOME/.local/share/pnpm
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;

@@ -7,15 +7,6 @@ return {
             -- Reserve a space in the gutter
             -- This will avoid an annoying layout shift in the screen
             vim.opt.signcolumn = 'yes'
-            -- local lsp_defaults = require("lspconfig").util.default_config
-            --
-            -- -- Add cmp_nvim_lsp capabilities settings to lspconfig
-            -- -- This should be executed before you configure any language server
-            -- lsp_defaults.capabilities = vim.tbl_deep_extend(
-            -- 	"force",
-            -- 	lsp_defaults.capabilities,
-            -- 	require("cmp_nvim_lsp").default_capabilities()
-            -- )
 
             -- LspAttach is where you enable features that only work
             -- if there is a language server active in the file
@@ -44,44 +35,6 @@ return {
                     client.server_capabilities.documentFormattingRangeProvider = false
                 end,
             })
-
-            -- require('mason-lspconfig').setup({
-            --     handlers = {
-            --         -- this first function is the "default handler"
-            --         -- it applies to every language server without a "custom handler"
-            --         function(server_name)
-            --             require("lspconfig")[server_name].setup({})
-            --         end,
-            --         cssls = function()
-            --             local capabilities =
-            --
-            --                 require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
-            --             require("lspconfig").cssls.setup({
-            --                 capabilities = capabilities,
-            --             })
-            --         end,
-            --
-            --         ts_ls = function()
-            --             require("lspconfig").ts_ls.setup({
-            --                 on_init = function(client)
-            --                     client.server_capabilities.documentFormattingProvider = false
-            --                     client.server_capabilities.documentFormattingRangeProvider = false
-            --                 end,
-            --             })
-            --         end,
-            --         stylelint_lsp = function()
-            --             require("lspconfig").stylelint_lsp.setup({
-            --                 filetypes = { "css", "less", "scss", "sugarss" },
-            --                 settings = {
-            --                     stylelintplus = {
-            --                         autoFixOnFormat = true,
-            --                         -- autoFixOnSave = true,
-            --                     },
-            --                 },
-            --             })
-            --         end,
-            --     }
-            -- })
         end,
         opts = {
             ensure_installed = {
