@@ -8,36 +8,12 @@ return {
     --   end,
     -- },
     {
-        'vague2k/vague.nvim',
+        'deparr/tairiki.nvim',
+        lazy = false,
+        priority = 1000, -- recommended if you use tairiki as your default theme
         init = function()
-            vim.cmd('colorscheme vague')
+            vim.cmd('colorscheme tairiki')
         end,
-        opts = {
-            plugins = {
-                cmp = {
-                    match = 'bold',
-                    match_fuzzy = 'bold',
-                },
-                dashboard = {
-
-                    footer = 'italic',
-                },
-                lsp = {
-                    diagnostic_error = 'bold',
-                    diagnostic_hint = 'none',
-                    diagnostic_info = 'italic',
-                    diagnostic_ok = 'none',
-                    diagnostic_warn = 'bold',
-                },
-                neotest = {
-                    focused = 'bold',
-                    adapter_name = 'bold',
-                },
-                telescope = {
-                    match = 'bold',
-                },
-            },
-        },
     },
     {
         'folke/noice.nvim',
