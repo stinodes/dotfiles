@@ -1,0 +1,19 @@
+#!/bin/bash
+
+apps=($(ls $STN_BIN/apps))
+
+echo "Installing missing apps..."
+for app in "${apps[@]}"; do
+    is_installed="$(stn-app $app installed > /dev/null 2>&1)"
+    if  [ $? -eq 0 ] ; then
+        echo "$app is already installed"
+    else
+        echo "Installing $app"
+        stn-app $app install
+    fi
+done
+
+echo "Setting up apps..."
+for app in "${apps[@]}"; do
+    stn-app $app setup
+done

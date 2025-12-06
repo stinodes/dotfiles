@@ -14,7 +14,5 @@ function uninstall {
 
 function setup {
     ln -nsf $STN_CONFIG_DIR/nvim $HOME/.config/nvim
-    echo $STN_THEME_CURRENT/neovim.lua $STN_CONFIG_DIR/nvim/lua/plugins/theme.lua
-
     ln -snf $STN_THEME_CURRENT/neovim.lua $STN_CONFIG_DIR/nvim/lua/plugins/theme.lua
 }
