@@ -1,0 +1,9 @@
+export STN_HOME=$HOME/.config/stn
+export STN_CONFIG_DIR=$STN_HOME/config
+export STN_SYSTEM_DIR=$STN_HOME//system
+export STN_BIN=$STN_HOME/bin
+export STN_THEMES=$STN_HOME/themes
+export STN_THEME_CURRENT=$STN_THEMES/current
+export PATH=$PATH:$STN_BIN
+
+export EDITOR=nvim

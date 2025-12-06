@@ -1,0 +1,4 @@
+force_keyboard_focus=true
+selection_wrap=true
+app_launch_prefix = "uwsm app -- "
+theme = "stn"

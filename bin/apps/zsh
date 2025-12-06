@@ -1,0 +1,20 @@
+#!/bin/bash
+
+function installed {
+    stn-is-installed zsh
+}
+
+function install {
+    sudo pacman -S --noconfirm zsh > /dev/null
+    curl -sS https://starship.rs/install.sh | sh > /dev/null
+}
+
+function uninstall {
+    sudo pacman -R --noconfirm zsh
+    sh -c 'rm "$(command -v 'starship')"'
+}
+
+function setup {
+    ln -nsf $STN_CONFIG_DIR/.zshrc $HOME/.zshrc
+    ln -nsf $STN_CONFIG_DIR/starship.toml $HOME/.config/starship.toml
+}

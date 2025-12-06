@@ -1,0 +1,26 @@
+#!/bin/bash
+
+function installed {
+    stn-is-installed walker
+    stn-is-installed elephant
+}
+
+function install {
+    sudo pacman -S --noconfirm elephant walker > /dev/null
+    sudo pacman -S --noconfirm elephant-calc elephant-desktopapplications elephant-clipboard elephant-runner elephant-todo > /dev/null
+    yay -S --noconfirm elephant-1password > /dev/null
+
+    elephant service enable
+    systemctl --user enable elephant.service
+    echo "Run 'systemctl --user start elephant.service' to start the elephant service"
+}
+
+function uninstall {
+    sudo pacman -R --noconfirm elephant
+    sudo pacman -R --noconfirm walker
+}
+
+function setup {
+    ln -nsf $STN_CONFIG_DIR/walker ~/.config/walker
+    ln -nsf $STN_CONFIG_DIR/elephant ~/.config/elephant
+}

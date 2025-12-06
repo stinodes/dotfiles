@@ -1,0 +1,17 @@
+#!/bin/bash
+
+function installed() {
+    stn-is-installed uwsm
+}
+
+function install() {
+    exit 0
+}
+
+function uninstall() {
+    echo "This is a bad idea. Cancelling..."
+}
+
+function setup() {
+    ln -nsf $STN_CONFIG_DIR/uwsm ~/.config/uwsm
+}

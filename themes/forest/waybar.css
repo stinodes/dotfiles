@@ -1,0 +1,27 @@
+/* 
+  bg - background
+  fg - foreground
+  br - border
+*/
+
+/* Main Colors */
+@define-color darkgreen #0C1D11;
+@define-color forestgreen #2e6f40;
+
+@define-color shadow shade(#111111, 0.5);
+@define-color main-fg @text;
+@define-color main-br @layer2;
+@define-color distro-fg @forestgreen;
+
+/* background */
+@define-color layer0 #060e0a;
+@define-color layer1 @darkgreen;
+@define-color layer2 #122b1d;
+@define-color layer3 #183a26;
+@define-color layer4 #1e4830;
+
+@define-color active-bg alpha(white, .2);
+@define-color active-fg @text;
+
+@define-color hover-bg alpha(white, .1);
+@define-color hover-fg @text;

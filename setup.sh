@@ -63,7 +63,6 @@ function install_or_exit() {
         return 1
     fi
 
-
     if read -q "INSTALL_CHOICE?$(echo -e "${Blue}Would you like to install ${BBlue}$1${Blue} now? ${Color_Off}(y/n)")"; then
         echo
         $2
@@ -128,11 +127,26 @@ else
     mkdir ~/.config
 fi
 
+echo -e "${BBlue}Linking Hyprland config${Color_Off}"
+create_link "$DIR/hypr" ~/.config/hypr
+
+echo -e "${BBlue}Linking Waybar config${Color_Off}"
+create_link "$DIR/waybar" ~/.config/waybar
+
+echo -e "${BBlue}Linking Rofi config${Color_Off}"
+create_link "$DIR/rofi" ~/.config/rofi
+
 echo -e "${BBlue}Linking NVIM config${Color_Off}"
 create_link "$DIR/nvim" ~/.config/nvim
 
 echo "${BBlue}Linking Kitty config${Color_Off}"
 create_link "$DIR/kitty" ~/.config/kitty
+
+echo "${BBlue}Linking Ghostty config${Color_Off}"
+create_link "$DIR/ghostty" ~/.config/ghostty
+
+echo "${BBlue}Linking TMUX config${Color_Off}"
+create_link "$DIR/tmux" ~/.config/tmux
 
 echo "${BBlue}Linking Starship config${Color_Off}"
 create_link "$DIR/starship.toml" ~/.config/starship.toml

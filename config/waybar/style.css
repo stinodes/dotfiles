@@ -1,0 +1,325 @@
+@import "theme.css";
+
+* {
+    min-height: 0;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------------------------------------------- MAIN BACKGROUND --- */
+
+window#waybar>box {
+    background: @layer0;
+    margin: 2px;
+}
+
+/* --------------------------------------------------------- DROP SHADOW --- */
+
+window#waybar {
+    background: @shadow;
+}
+
+/* ------------------------------------------------------------ TOOLTIPS --- */
+
+tooltip {
+    background: @layer0;
+    border: 1.5px solid @main-br;
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: @text;
+    margin: -1.5px 3px;
+}
+
+/* ---------------------------------------- WORKSPACE BUTTONS and LABELS --- */
+
+#workspaces button {
+    color: @module-fg;
+    border-radius: 0;
+    padding: 0 4px;
+    padding-top: 2px;
+    box-shadow: none;
+    transition: none;
+}
+
+#workspaces button:hover {
+    color: @hover-fg;
+    background: @hover-bg;
+    text-shadow: none;
+}
+
+#workspaces button.active {
+    color: @active-fg;
+    background: @active-bg;
+}
+
+/* ------------------------------------------------------------- GENERAL --- */
+
+#custom-ws,
+#workspaces,
+#window,
+#clock,
+#custom-wifi,
+#bluetooth,
+#custom-update,
+#mpris,
+#pulseaudio,
+#backlight,
+#battery,
+#custom-power {
+    opacity: 1;
+    color: @text;
+    padding: 0 4px;
+}
+
+/* ------------------------------------------------------------- MODULES --- */
+
+/* --------------------------------------------------------- window icon --- */
+
+#custom-ws {
+    background: @custom-ws;
+}
+
+#custom-ws:hover {
+    color: @hover-fg;
+}
+
+/* ---------------------------------------------------------- workspaces --- */
+
+#workspaces {
+    background: @workspaces;
+}
+
+#window {
+    background: @window;
+}
+
+/* --------------------------------------------------------- temperature --- */
+
+#custom-paddc {
+    padding-right: 22px;
+}
+
+#custom-temperature {
+    background: @temperature;
+    padding: 0 0 0 1px;
+}
+
+/* -------------------------------------------------------------- memory --- */
+
+#memory {
+    background: @memory;
+    padding: 0 0 0 1px;
+}
+
+#memory.warning {
+    color: @warning;
+}
+
+#memory.critical {
+    color: @critical;
+}
+
+/* ----------------------------------------------------------------- cpu --- */
+
+#cpu {
+    background: @cpu;
+}
+
+/* ---------------------------------------------------------------- time --- */
+#idle_inhibitor {
+    background: @time;
+    padding: 0 0 0 7px;
+}
+
+#idle_inhibitor:hover {
+    color: @hover-fg;
+}
+
+#clock.time {
+    background: @time;
+    margin-left: -2px;
+    padding: 0 3px 0 0;
+}
+
+/* ---------------------------------------------------------------- date --- */
+
+#clock.date {
+    background: @date;
+}
+
+#clock.date:hover {
+    color: @hover-fg;
+    background: @hover-bg;
+}
+
+/* ---------------------------------------------------------------- tray --- */
+
+#custom-wifi {
+    background: @netw;
+    padding: 0 8px 0 5px;
+}
+
+#custom-wifi:hover {
+    color: @hover-fg;
+    background: @hover-bg;
+}
+
+#bluetooth {
+    background: @netw;
+    padding-right: 5px;
+}
+
+#bluetooth:hover {
+    color: @hover-fg;
+    background: @hover-bg;
+}
+
+#custom-update {
+    padding-right: 8px;
+    background: @netw;
+}
+
+#custom-update:hover {
+    color: @hover-fg;
+    background: @hover-bg;
+}
+
+/* ---------------------------------------------------------- media info --- */
+
+#mpris {
+    background: @layer0;
+    padding: 0 8px 0;
+}
+
+#mpris:hover {
+    color: @hover-fg;
+}
+
+/*
+    output device
+*/
+
+#pulseaudio {
+    background: @pulse;
+}
+
+#pulseaudio:hover {
+    color: @hover-fg;
+    background: @hover-bg;
+}
+
+/* ---------------------------------------------------------- LAPTOP --- */
+
+#backlight {
+    background: @laptop;
+}
+
+#battery {
+    color: @module-fg;
+    background: @laptop;
+}
+
+#battery.warning {
+    color: @warning;
+}
+
+#battery.critical {
+    color: @critical;
+}
+
+#battery.charging {
+    color: @charging;
+}
+
+/* -------------------------------------------------------- power button --- */
+
+#custom-power {
+    background: @power;
+    padding: 0 12px;
+}
+
+#custom-power:hover {
+    color: @hover-fg;
+    background: @hover-bg;
+}
+
+/* ---------------------------------------------------------- FONT SIZES --- */
+
+/*
+    NOTE: Be careful when changing font sizes, as they
+    can affect alignment.
+
+    Try adjusting whole numbers first, then refine with
+    decimals.
+
+    If you increase or decrease a value, make the same
+    change to all properties in this section to keep
+    the layout consistent.
+*/
+
+* {
+    font-family: "FiraCode Nerd Font";
+    font-size: 14px;
+    font-weight: 500;
+}
+
+tooltip label,
+#window label,
+#mpris {}
+
+/* ----------------------------------------------- left and right arrows --- */
+#custom-left1,
+#custom-left2,
+#custom-left3,
+#custom-left4 {
+    margin-bottom: 0;
+    font-size: 24px;
+    text-shadow: -5px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#custom-right1,
+#custom-right2,
+#custom-right3,
+#custom-right4 {
+    font-size: 24px;
+    margin-bottom: 0;
+    padding-right: 3px;
+    text-shadow: 5px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#custom-left1,
+#custom-right1 {
+    background: @layer0;
+    color: @layer1;
+}
+
+#custom-left2,
+#custom-right2 {
+    background: @layer1;
+    color: @layer2;
+}
+
+#custom-left3,
+#custom-right3 {
+    background: @layer2;
+    color: @layer3;
+}
+
+#custom-left4,
+#custom-right4 {
+    background: @layer3;
+    color: @layer0;
+}
+
+/* -------------------------------------------------------------- distro --- */
+
+#custom-distro {
+    color: @distro-fg;
+    margin: 0 8px;
+    padding-left: 3px;
+    font-size: 20px;
+    text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
+}

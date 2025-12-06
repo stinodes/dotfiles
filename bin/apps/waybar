@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+function installed() {
+    stn-is-installed waybar
+}
+
+function install() {
+    sudo pacman -S --noconfirm waybar
+}
+
+function uninstall() {
+    sudo pacman -R --noconfirm waybar
+}
+
+function setup() {
+    ln -nsf $STN_CONFIG_DIR/waybar ~/.config/waybar
+}

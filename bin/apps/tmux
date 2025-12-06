@@ -1,0 +1,17 @@
+#!/bin/bash
+
+function installed {
+    stn-is-installed tmux
+}
+
+function install {
+    sudo pacman -S --noconfirm tmux > /dev/null 2>&1
+}
+
+function uninstall {
+    sudo pacman -R --noconfirm tmux
+}
+
+function setup {
+    ln -nsf $STN_CONFIG_DIR/tmux $HOME/.config/tmux
+}

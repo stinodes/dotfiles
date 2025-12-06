@@ -1,0 +1,18 @@
+#!/bin/bash
+
+function installed {
+    stn-is-installed hyprland
+    stn-is-installed hyprpaper
+}
+
+function install {
+    sudo pacman -S --noconfirm hyprland hyprpaper > /dev/null
+}
+
+function uninstall {
+    echo "This is a bad idea. Cancelling..."
+}
+
+function setup {
+    ln -nsf $STN_CONFIG_DIR/hypr $HOME/.config/hypr
+}

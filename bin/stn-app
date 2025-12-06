@@ -1,0 +1,27 @@
+#!/bin/bash
+
+STN_CONFIG_DIR=$HOME/.config/stn/config
+
+app=$1
+fn=$2
+
+. $HOME/.config/stn/bin/apps/$app
+
+case "$fn" in
+    installed)
+        installed "${@:3}"
+        ;;
+    install)
+        install "${@:4}"
+        ;;
+    uninstall)
+        uninstall "${@:5}"
+        ;;
+    setup)
+        setup "${@:6}"
+        ;;
+    *)
+        echo "Usage: $0 {installed|install|uninstall|setup}"
+        exit 1
+        ;;
+esac

@@ -1,0 +1,23 @@
+#!/bin/bash
+
+allbgs=($(ls $STN_THEME_CURRENT/backgrounds))
+bgs=($(printf "%s\n" "${allbgs[@]}" | grep -v 'current'))
+currentbgname="$(basename "$(readlink "$STN_THEME_CURRENT/backgrounds/current")")"
+
+echo ${bgs[@]}
+
+function currentbg {
+    for i in "${!bgs[@]}"; do
+        if [[ "${bgs[$i]}" == "$currentbgname" ]]; then
+            echo "$i"
+        fi
+    done
+}
+
+i="$(currentbg)"
+next=$(((i+1) % (${#bgs[@]})))
+
+filename="${bgs[$next]}"
+echo $filename
+ln -nsf $STN_THEME_CURRENT/backgrounds/$filename $STN_THEME_CURRENT/backgrounds/current
+stn-restart-hyprpaper

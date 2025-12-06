@@ -1,0 +1,8 @@
+#!/bin/bash
+
+pkill elephant
+pkill walker
+
+elephant service enable 2>/dev/null
+systemctl --user restart elephant.service
+exec setsid walker --gapplication-service

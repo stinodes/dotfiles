@@ -1,0 +1,4 @@
+@define-color primary #2e6f40;
+@define-color bg #0C1D11;
+@define-color selected darker(@primary);
+@define-color text @highlight;

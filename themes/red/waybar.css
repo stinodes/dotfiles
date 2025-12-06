@@ -1,0 +1,27 @@
+/* 
+  bg - background
+  fg - foreground
+  br - border
+*/
+
+/* Main Colors */
+@define-color red #CD1C18;
+@define-color dark #252525;
+
+@define-color shadow shade(#111111, 0.5);
+@define-color main-fg @text;
+@define-color main-br @layer2;
+@define-color distro-fg @red;
+
+/* background */
+@define-color layer0 shade(@dark, .5);
+@define-color layer1 shade(@dark, .8);
+@define-color layer2 @dark;
+@define-color layer3 lighter(@dark);
+@define-color layer4 #1e4830;
+
+@define-color active-bg alpha(white, .2);
+@define-color active-fg @text;
+
+@define-color hover-bg alpha(white, .1);
+@define-color hover-fg @text;

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+dir="$STN_BIN/apps"
+
+apps=$(ls $dir)
+echo $apps

@@ -1,0 +1,20 @@
+@import "../stn/themes/current/waybar.css";
+/* Module Colors */
+
+@define-color module-fg @text;
+
+/* LEFT */
+@define-color workspaces @layer3;
+@define-color window @layer2;
+
+/* RIGHT */
+@define-color netw @layer1;
+@define-color pulse @layer2;
+@define-color laptop @layer3;
+@define-color power @layer3;
+
+/* State Colors */
+
+@define-color warning @yellow;
+@define-color critical @red;
+@define-color charging @text;

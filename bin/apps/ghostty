@@ -1,0 +1,17 @@
+#!/bin/bash
+
+function installed {
+    stn-is-installed ghostty
+}
+
+function install {
+    sudo pacman -S --noconfirm ghostty > /dev/null
+}
+
+function uninstall {
+    sudo pacman -R --noconfirm ghostty
+}
+
+function setup {
+    ln -nsf $STN_CONFIG_DIR/ghostty $HOME/.config/ghostty
+}

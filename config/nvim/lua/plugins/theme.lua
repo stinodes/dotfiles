@@ -1,0 +1,1 @@
+/home/stinodes/.config/stn/themes/current/neovim.lua

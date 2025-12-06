@@ -1,0 +1,22 @@
+#!/bin/bash
+
+function join_by() { local IFS="$1"; shift; echo "$*"; }
+
+theme=$1
+themes=("$(ls $STN_THEMES)")
+
+if [ -z "$theme" ]; then
+    echo "Usage: $0 {$(join_by '|' "${themes[@]}")}"
+    exit 1
+fi
+
+ln -nsf $STN_THEMES/$theme $STN_THEME_CURRENT
+if [ ! -f $STN_THEME_CURRENT/backgrounds/current ]; then 
+    echo "No background found, using default"
+    ln -nsf $STN_THEME_CURRENT/backgrounds/01.jpg $STN_THEME_CURRENT/backgrounds/current
+fi
+
+stn-reload-hyprland > /dev/null
+stn-restart-hyprpaper
+stn-restart-waybar
+tmux source-file $HOME/.config/tmux/tmux.conf

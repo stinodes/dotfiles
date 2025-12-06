@@ -1,0 +1,3 @@
+#!/bin/bash
+
+exec setsid uwsm-app -- xdg-terminal-exec --app-id=dev.stinodes.$(basename $1) "$1"
