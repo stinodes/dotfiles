@@ -13,5 +13,6 @@ function uninstall {
 }
 
 function setup {
+    mv $HOME/.config/ghostty $HOME/.config/ghostty.bak
     ln -nsf $STN_CONFIG_DIR/ghostty $HOME/.config/ghostty
 }

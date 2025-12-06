@@ -21,6 +21,8 @@ function uninstall {
 }
 
 function setup {
+    mv $HOME/.config/walker $HOME/.config/walker.bak
+    mv $HOME/.config/elephant $HOME/.config/elephant.bak
     ln -nsf $STN_CONFIG_DIR/walker ~/.config/walker
     ln -nsf $STN_CONFIG_DIR/elephant ~/.config/elephant
 }
