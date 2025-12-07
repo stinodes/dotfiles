@@ -1,5 +1,10 @@
 #! /bin/bash
 
+if [ -z "$STN_HOME" ];then
+    export STN_HOME=$(pwd)
+    ./bin/stn-set-env
+fi
+
 cols=$(tput cols)
 
 # Define color (you can change 36 to other ANSI color codes)
@@ -18,11 +23,6 @@ while IFS= read -r line; do
   padding=$(( (cols - ${#line}) / 10 ))
       printf "%*s$(stn-echo-style "green" "%s${nc}")\n" "$padding" "" "$line"
 done <<< "$art"
-
-if [ -z "$STN_HOME" ];then
-    export STN_HOME=$(pwd)
-    ./bin/stn-set-env
-fi
 
 echo -e "${color}STN_HOME${nc}=${STN_HOME}"
 echo -e "${color}STN_BIN${nc}=${STN_BIN}"
