@@ -1,5 +1,3 @@
-source $HOME/.config/uwsm.bak/env
-
 export STN_HOME=$HOME/.config/stn
 export STN_CONFIG_DIR=$STN_HOME/config
 export STN_SYSTEM_DIR=$STN_HOME//system
@@ -9,3 +7,4 @@ export STN_THEME_CURRENT=$STN_THEMES/current
 export PATH=$PATH:$STN_BIN
 
 export EDITOR=nvim
+export TERMINAL=ghostty

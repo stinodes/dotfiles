@@ -13,6 +13,10 @@ function uninstall() {
 }
 
 function setup() {
-    mv $HOME/.config/uwsm $HOME/.config/uwsm.bak
-    ln -nsf $STN_CONFIG_DIR/uwsm ~/.config/uwsm
+    # mv $HOME/.config/uwsm $HOME/.config/uwsm.bak
+    if [ ! -d ~/.config/uwsm ]; then
+        mkdir ~/.config/uwsm
+    fi
+    ln -nsf $STN_CONFIG_DIR/uwsm/env ~/.config/uwsm/stn
+    echo "source ~/.config/uwsm/stn" >> ~/.config/uwsm/env
 }
