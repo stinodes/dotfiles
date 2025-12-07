@@ -2,7 +2,7 @@
 
 if [ -z "$STN_HOME" ];then
     export STN_HOME=$(pwd)
-    ./bin/stn-set-env
+    . ./bin/stn-set-env
 fi
 
 cols=$(tput cols)
