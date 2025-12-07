@@ -6,14 +6,15 @@ echo "Installing missing apps..."
 for app in "${apps[@]}"; do
     is_installed="$(stn-app $app installed > /dev/null 2>&1)"
     if  [ $? -eq 0 ] ; then
-        echo "$app is already installed"
+        echo "$(stn-echo-style "green" "󰄳 $app") is already installed"
     else
-        echo "Installing $app"
-        stn-app $app install
+        echo "$(stn-echo-style "blue" 󰇚) Installing $(stn-echo-style "blue" $app)"
+        stn-app $app install > /dev/null
     fi
 done
 
 echo "Setting up apps..."
 for app in "${apps[@]}"; do
+    echo "$(stn-echo-style "blue" "󰖷") Setting up $(stn-echo-style "blue" $app)"
     stn-app $app setup
 done

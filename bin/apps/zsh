@@ -5,9 +5,11 @@ function installed {
 }
 
 function install {
-    sudo pacman -S --noconfirm zsh > /dev/null
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    curl -sS https://starship.rs/install.sh | sh > /dev/null
+    sudo pacman -S --noconfirm zsh 
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended --keep-zshrc 
+    curl -sS https://starship.rs/install.sh > starship.sh
+    sh starship.sh --yes 
+    rm starship.sh
 }
 
 function uninstall {
@@ -16,7 +18,10 @@ function uninstall {
 }
 
 function setup {
-    mv $HOME/.config/nvim $HOME/.config/nvim.bak
+    zsh=$HOME/.zshrc
+    starship=$HOME/.config/starship.toml
+    stn-backup $zsh
+    stn-backup $starship
     ln -nsf $STN_CONFIG_DIR/.zshrc $HOME/.zshrc
     ln -nsf $STN_CONFIG_DIR/starship.toml $HOME/.config/starship.toml
 }

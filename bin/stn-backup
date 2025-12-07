@@ -1,0 +1,6 @@
+#!/bin/bash
+
+target=$1
+if stn-dir-exists $target && ! stn-dir-linked $target; then
+    mv $target $target.bak
+fi

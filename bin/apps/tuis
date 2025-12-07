@@ -1,0 +1,23 @@
+#!/bin/bash
+
+function installed {
+    stn-is-installed spotify_player
+    stn-is-installed bluetui
+    stn-is-installed impala
+    stn-is-installed btm
+    stn-is-installed lazygit
+    stn-is-installed lazydocker
+    stn-is-installed wiremix
+}
+
+function install {
+    sudo pacman -S --noconfirm spotify-player bluetui impala bottom lazygit lazydocker wiremix
+}
+
+function uninstall {
+    sudo pacman -R --noconfirm spotify-player bluetui impala bottom lazygit lazydocker wiremix
+}
+
+function setup {
+    exit 0
+}

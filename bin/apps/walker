@@ -6,9 +6,8 @@ function installed {
 }
 
 function install {
-    sudo pacman -S --noconfirm elephant walker > /dev/null
-    sudo pacman -S --noconfirm elephant-calc elephant-desktopapplications elephant-clipboard elephant-runner elephant-todo > /dev/null
-    yay -S --noconfirm elephant-1password > /dev/null
+    sudo pacman -S --noconfirm elephant walker 
+    sudo pacman -S --noconfirm elephant-calc elephant-desktopapplications elephant-clipboard elephant-runner elephant-todo 
 
     elephant service enable
     systemctl --user enable elephant.service
@@ -21,8 +20,10 @@ function uninstall {
 }
 
 function setup {
-    mv $HOME/.config/walker $HOME/.config/walker.bak
-    mv $HOME/.config/elephant $HOME/.config/elephant.bak
+    walker=$HOME/.config/walker
+    elephant=$HOME/.config/elephant
+    stn-backup $walker
+    stn-backup $elephant
     ln -nsf $STN_CONFIG_DIR/walker ~/.config/walker
     ln -nsf $STN_CONFIG_DIR/elephant ~/.config/elephant
 }

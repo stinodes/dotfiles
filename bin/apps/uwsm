@@ -5,7 +5,7 @@ function installed() {
 }
 
 function install() {
-    exit 0
+    sudo pacman -S --noconfirm uwsm
 }
 
 function uninstall() {

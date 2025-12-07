@@ -6,7 +6,7 @@ function installed {
 }
 
 function install {
-    sudo pacman -S --noconfirm hyprland hyprpaper > /dev/null
+    sudo pacman -S --noconfirm hyprland hyprpaper
 }
 
 function uninstall {
@@ -14,10 +14,10 @@ function uninstall {
 }
 
 function setup {
-    mv $HOME/.config/hypr $HOME/.config/hypr.bak
-    ln -nsf $STN_CONFIG_DIR/hypr $HOME/.config/hypr
-
-    if [ ! -f $STN_CONFIG_DIR/hypr/monitors.conf ]; then
-        echo "monitor=,preferred,auto,auto" >> $STN_CONFIG_DIR/hypr/monitors.conf
+    target=$HOME/.config/hypr
+    stn-backup $target
+    ln -nsf $STN_CONFIG_DIR/hypr $target
+    if [ ! -f $STN_CONFIG_DIR/hypr/hyprland/monitors.conf ]; then
+        echo "monitor=,preferred,auto,auto" >> $STN_CONFIG_DIR/hypr/hyprland/monitors.conf
     fi
 }

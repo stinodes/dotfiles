@@ -5,7 +5,7 @@ function installed {
 }
 
 function install {
-    sudo pacman -S --noconfirm neovim ripgrep fd > /dev/null
+    sudo pacman -S --noconfirm neovim ripgrep fd 
 }
 
 function uninstall {
@@ -13,7 +13,8 @@ function uninstall {
 }
 
 function setup {
-    mv $HOME/.config/nvim $HOME/.config/nvim.bak
+    target=$HOME/.config/nvim
+    stn-backup $target
     ln -nsf $STN_CONFIG_DIR/nvim $HOME/.config/nvim
     ln -snf $STN_THEME_CURRENT/neovim.lua $STN_CONFIG_DIR/nvim/lua/plugins/theme.lua
 }

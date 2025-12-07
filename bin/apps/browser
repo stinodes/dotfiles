@@ -1,0 +1,17 @@
+#!/bin/bash
+
+function installed {
+    stn-is-installed zen
+}
+
+function install {
+    yay -S --noconfirm zen-browser
+}
+
+function uninstall {
+    yay -R --noconfirm zen-browser
+}
+
+function setup {
+    exit 0
+}

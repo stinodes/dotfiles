@@ -1,0 +1,20 @@
+#!/bin/bash
+
+function installed {
+    if [ -z "$(fc-list | grep "Fira Code")" ]; then
+        return 0
+    fi
+    return 1
+} 
+
+function install {
+    sudo pacman -S --noconfirm ttf-fira-code
+}
+
+function uninstall {
+    sudo pacman -R --noconfirm ttf-fira-code
+}
+
+function setup {
+    exit 0
+}
