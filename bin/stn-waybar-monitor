@@ -1,0 +1,15 @@
+#!/bin/bash
+
+monitor=$1
+target=$STN_CONFIG_DIR/waybar/output.jsonc
+
+if [ -z "$monitor" ]; then
+    echo "No monitors passed"
+    echo '{}' > $target
+    exit 0
+fi
+
+echo '{
+    "output": "'${monitor}'"
+}
+' > $target

@@ -49,4 +49,5 @@ echo "     ⏼ Reboot"
 echo "     󰍹 Check out $(stn-echo-style "blue" "~/.config/hypr/hyprland/monitors.conf")"
 echo "      Check out $(stn-echo-style "blue" "~/.config/hypr/hyprland/workspaces.conf")"
 
+zsh
 

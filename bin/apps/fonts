@@ -2,9 +2,9 @@
 
 function installed {
     if [ -z "$(fc-list | grep "Fira Code")" ]; then
-        return 0
+        return 1
     fi
-    return 1
+    return 0
 } 
 
 function install {

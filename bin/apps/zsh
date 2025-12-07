@@ -6,7 +6,7 @@ function installed {
 
 function install {
     sudo pacman -S --noconfirm zsh 
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" --unattended --keep-zshrc 
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc 
     curl -sS https://starship.rs/install.sh > starship.sh
     sh starship.sh --yes 
     rm starship.sh
@@ -14,7 +14,8 @@ function install {
 
 function uninstall {
     sudo pacman -R --noconfirm zsh
-    sh -c 'rm "$(command -v 'starship')"'
+    sh ~/.oh-my-zsh/tools/uninstall.sh
+    sudo sh -c 'rm "$(command -v 'starship')"'
 }
 
 function setup {
