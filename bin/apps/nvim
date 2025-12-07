@@ -5,7 +5,7 @@ function installed {
 }
 
 function install {
-    sudo pacman -S --noconfirm neovim > /dev/null
+    sudo pacman -S --noconfirm neovim ripgrep fd > /dev/null
 }
 
 function uninstall {
