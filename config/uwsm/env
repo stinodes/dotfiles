@@ -7,4 +7,5 @@ export STN_THEME_CURRENT=$STN_THEMES/current
 export PATH=$PATH:$STN_BIN
 
 export EDITOR=nvim
+export BROWSER=zen
 export TERMINAL=ghostty
