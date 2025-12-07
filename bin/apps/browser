@@ -5,11 +5,11 @@ function installed {
 }
 
 function install {
-    yay -S --noconfirm zen-browser
+    yay -S --noconfirm zen-browser-bin
 }
 
 function uninstall {
-    yay -R --noconfirm zen-browser
+    yay -R --noconfirm zen-browser-bin
 }
 
 function setup {
