@@ -1,7 +1,11 @@
 #!/bin/bash
 
 function installed {
-    stn-is-installed zen-browser
+    if stn-is-installed zen || stn-is-installed zen-browser; then
+        exit 0
+    fi
+    exit 1
+
 }
 
 function install {
