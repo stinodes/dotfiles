@@ -48,14 +48,14 @@ cd ~/.config/stn
 
 ## Keybinds
 
-**General**
+**General**  
 `super + space` | Open app menu (`:` for clipboard, `>` for runner)
 `super + q` | Quit app
 `super + f` | Toggle fullscreen
 `super + g` | Toggle floating
 `super + v` | Toggle orientation
 
-**Workspaces**
+**Workspaces**  
 `super + <y,u,i,o,p>` | Cycle main monitor workspaces
 `super + m` | Move to game workspace (see windowrules)
 `super + ctrl + <h,l>` | Focus monitor left/right (check `monitors.conf` & `workspaces.conf`)
@@ -63,7 +63,7 @@ cd ~/.config/stn
 
 **Note:** add `shift` as modifier to move the current window instead of changing focus
 
-**nvim**
+**nvim**  
 See `which-key` and keybinds files for more info.
 
 ## Customizing
