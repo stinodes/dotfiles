@@ -1,6 +1,6 @@
 # Dotfiles
 
-<img alt="Starter screen using alpha" src="examples/Alpha.png" width="66%" style="display: block; margin: auto;">
+<img alt="Starter screen using alpha" src="examples/03.jpg" width="66%" style="display: block; margin: auto;">
 
 [**1) Setup**](#setup)  
 [**2) Examples**](#examples)  
@@ -8,152 +8,75 @@
 [**4) Customizations**](#customizations)  
 [**5) Keybinds**](#Keybinds)
 
-Set of dotfiles, making up my unified development suite, themed with Catppuccin.
 **Included configs:**
 
-- OMZ
-- Starship
-- NeoVim
-- Kitty
+- zsh/omz/starship
+- neovim
+- ghostty
+- tuis
+- walker
+- hyprland
+- waybar
+- FiraCode
+- uwsm
+- tmux
+- theming
+- Includes several scripts
 
 ## Setup
 
-A setup script has been included, guiding you through the setup of a new system.  
-Execute the script in a bash shell to be notified to install `zsh` instead.  
-`source <script>` the script to run the installation process. After installing
-OMZ, you might need to rerun the script.
+Installing is done easily by cloning and running the setup script.
 
-Run `PackerInstall` in NeoVim after the linking process has completed.
+```bash
+git clone https://github.com/stinodes/dotfiles.git ~/.config/stn
+cd ~/.config/stn
+./setup.sh
+```
 
-**Note:** the following automatic install scripts might only work for Debian-based systems, as they use `apt`:
+**Note:** To customize and distribute amongst your systems, fork the repo instead
 
-- Nvim
-- Git
+**After rebooting:** check the `config/hypr/hyprland/monitors.conf` file to customize your monitor setup if needed.
 
-## Examples
+<details>
+<summary>## Examples</summary>
 
-<img alt="Starter screen using alpha" src="examples/Alpha.png" width="49%" >
-<img alt="General layout and look" src="examples/Look.png" width="49%" >
-<img alt="Telescope as a finder" src="examples/Telescope.png" width="49%" >
-<img alt="Code actions" src="examples/CodeActions.png" width="49%" >
-
-## Plugins
-
-**UI-elements**
-
-- Alpha (starter screen)
-- Nvim Tree (File tree)
-- Noice (Command prompt)
-- Telescope (Fuzzy finder and selector)
-- Which Key (Keybind helper)
-- FTerm (Floating terminal)
-- Bufferline (Tabline for buffers)
-- Lualine (Statusline)
-- Fidget (Loading state)
-
-**LSP**  
-All language features are LSP-powered.
-
-- LSP Zero (Easy lsp config base)
-- Mason
-- Nvim CMP (Completion)
-  - Nvim CMP LSP (LSP as source)
-  - CMD Luasnip (LuaSnip as source)
-- LuaSnip (Snippets)
-- Code Action Menu (Code actions)
-- LSP File Operations
-- Null-ls (Tooling layer to LSP)
-
-**Code highlighting**
-
-- Treesitter (Highlighting)
-- Indent Blankline (Indent indicators)
-- Colorizer (Hex/name color indicator)
-
-**QoF/Misc**
-
-- Comment (Block comment via shortcuts)
-- Better escape (Escape via `jk`)
-
-## Customizations
-
-There are several (obviously) opinionated customizations implemented, outside of keybinds and plugin expectations.
-
-- **`<leader>` is set to `<space>`!**
-- Kitty margins are turned off when Nvim is running
-- File references get updated after changing a file (LSP file operations + Nvim Tree)
-- Lualine shows session name left of filename
+<img alt="Setup script" src="examples/01.png" width="49%" >
+<img alt="Red theme" src="examples/02.png" width="49%" >
+<img alt="Nvim" src="examples/03.png" width="49%" >
+<img alt="Several TUIs" src="examples/04.png" width="49%" >
+</details>
 
 ## Keybinds
 
-**Don't forget:** `which-key` will always help out displaying possible keybinds and keybind paths!
+**General**
+`super + space` | Open app menu (`:` for clipboard, `>` for runner)
+`super + q` | Quit app
+`super + f` | Toggle fullscreen
+`super + g` | Toggle floating
+`super + v` | Toggle orientation
 
-#### Core
+**Workspaces**
+`super + <y,u,i,o,p>` | Cycle main monitor workspaces
+`super + m` | Move to game workspace (see windowrules)
+`super + ctrl + <h,l>` | Focus monitor left/right (check `monitors.conf` & `workspaces.conf`)
+`super + <h,j,k,l>` | Move window focus
 
-| Binding       | Description              |
-| ------------- | ------------------------ |
-| **Buffers**   |                          |
-| `<leader>w`   | Save buffer              |
-| `<leader>W`   | Save buffers             |
-| `<leader>d`   | Close buffer             |
-| `<leader>D`   | Close all buffers        |
-| `<leader>q`   | Close window             |
-| `<leader>Q`   | Force close window       |
-| `<leader>p`   | Paste without yank       |
-| `<S-l>`       | Cycle to next buffer     |
-| `<S-h>`       | Cycle to previous buffer |
-| **Clipboard** |                          |
-| `<leader>y`   | Yank & copy to clip      |
-| `<leader>Y`   | Yank line & copy to clip |
-| `<leader>Y`   | Yank line & copy to clip |
-| `<C-j>`       | Move line up             |
-| `<C-k>`       | Move line down           |
-| **Misc**      |                          |
-| `<C-/>`       | Comment selected block   |
+**Note:** add `shift` as modifier to move the current window instead of changing focus
 
-#### LSP
+**nvim**
+See `which-key` and keybinds files for more info.
 
-| Binding             | Description                  |
-| ------------------- | ---------------------------- |
-| `<leader>ca`        | Open code actions            |
-| `<leader>r`         | Rename symbol                |
-| `K`                 | Hover documentation          |
-| **Telescope lists** |                              |
-| `<leader>gr`        | Symbol references            |
-| `<leader>gd`        | Symbol definitions           |
-| `<leader>gt`        | Symbol type definitions      |
-| `<leader>gs`        | Show document/buffer symbols |
-| `<leader>gw`        | Show workspace symbols       |
-| `<leader>gT`        | Show treesitter definitions  |
-| `<leader>gi`        | Symbol implementations       |
+## Customizing
 
-#### Nvim Tree
+All the config files are located in the `config` folder.
+To customize bindings:
 
-| Binding                 | Description              |
-| ----------------------- | ------------------------ |
-| `\`                     | Open/focus file tree     |
-| `<C-e>`                 | Toggle file tree         |
-| **While hovering node** |                          |
-| `h`                     | Collapse node/folder     |
-| `l`                     | Open folder or edit file |
+- `config/hypr/hyprland/bindings.conf`
+- `config/nvim/lua/keybinds/*`
 
-#### Sessions
+For themes:
 
-| Binding               | Description                 |
-| --------------------- | --------------------------- |
-| `<leader>sl`          | Show sessions in Telescope  |
-| `<leader>sw`          | Enter name and save session |
-| **In telescope list** |                             |
-| `<leader>sw`          | Save session                |
-| `<CR>`                | Open session                |
-| `<leader>d`           | Delete session              |
-| `<leader>r`           | Rename session              |
+- `themes/`
 
-#### FTerm
-
-| Binding       | Description                |
-| ------------- | -------------------------- |
-| `<leader>tt`  | Open floating terminal     |
-| `<leader>ts`  | Execute scratch command    |
-| `<leader>tdu` | Run `docker-compose up -d` |
-| `<leader>tdd` | Run `docker-compose down`  |
+To edit a theme, consider copying the folder, adjusting its name.  
+Switch themes by calling `stn-theme-set <theme name>`.
