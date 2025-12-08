@@ -40,10 +40,10 @@ cd ~/.config/stn
 <details>
 <summary><h2>Examples</h2></summary>
 
-<img alt="Setup script" src="examples/01.png" width="49%" >
-<img alt="Red theme" src="examples/02.png" width="49%" >
-<img alt="Nvim" src="examples/03.png" width="49%" >
-<img alt="Several TUIs" src="examples/04.png" width="49%" >
+<img alt="Setup script" src="examples/01.jpg" width="49%" >
+<img alt="Red theme" src="examples/02.jpg" width="49%" >
+<img alt="Nvim" src="examples/03.jpg" width="49%" >
+<img alt="Several TUIs" src="examples/04.jpg" width="49%" >
 </details>
 
 ## Keybinds
