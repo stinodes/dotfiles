@@ -3,10 +3,11 @@
 function installed {
     stn-is-installed hyprland
     stn-is-installed hyprpaper
+    stn-is-installed hyprshot
 }
 
 function install {
-    sudo pacman -S --noconfirm hyprland hyprpaper
+    sudo pacman -S --noconfirm hyprland hyprpaper hyprshot
 }
 
 function uninstall {

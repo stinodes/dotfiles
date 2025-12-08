@@ -8,11 +8,11 @@ function installed {
 } 
 
 function install {
-    sudo pacman -S --noconfirm ttf-fira-code
+    sudo pacman -S --noconfirm ttf-firacode-nerd
 }
 
 function uninstall {
-    sudo pacman -R --noconfirm ttf-fira-code
+    sudo pacman -R --noconfirm ttf-firacode-nerd
 }
 
 function setup {
