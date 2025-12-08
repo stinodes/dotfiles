@@ -38,7 +38,7 @@ cd ~/.config/stn
 **After rebooting:** check the `config/hypr/hyprland/monitors.conf` file to customize your monitor setup if needed.
 
 <details>
-<summary>## Examples</summary>
+<summary><h2>Examples</h2></summary>
 
 <img alt="Setup script" src="examples/01.png" width="49%" >
 <img alt="Red theme" src="examples/02.png" width="49%" >
