@@ -53,19 +53,43 @@ key | action
 --- | ---
 `super + space` | Open app menu (`:` for clipboard, `>` for runner)
 `super + q` | Quit app
+`super + t` | Open tmux terminal
+`super + shift + t` | Open terminal
+`super + b` | Open browser
+`super + e` | Open file explorer
+`super + s` | Open spotify (tui)
+
+**Windows**  
+key | action
 `super + f` | Toggle fullscreen
 `super + g` | Toggle floating
 `super + v` | Toggle orientation
+`super + <h,j,k,l>` | Move window focus
+`super + shift + <h,j,k,l>` | Move window
+`super + drag` | Move window
+`super + rightclick drag` | Resize window
 
 **Workspaces**  
 key | action
 --- | ---
 `super + <y,u,i,o,p>` | Cycle main monitor workspaces
+`super + shift + <y,u,i,o,p>` | Move window to workspace
+`super + x` | Open scratch workspace
+`super + shift + x` | Move to scratch workspace
 `super + m` | Move to game workspace (see windowrules)
 `super + ctrl + <h,l>` | Focus monitor left/right (check `monitors.conf` & `workspaces.conf`)
-`super + <h,j,k,l>` | Move window focus
+`super + shift + ctrl + <h,l>` | Move window to monitor left/right
 
-**Note:** add `shift` as modifier to move the current window instead of changing focus
+**tmux**  
+key | action
+--- | ---
+`ctrl + z` | Prefix
+`prefix <y,u,i,o,p>` | Move to window
+`prefix ctrl + <h,j,k,l>` | Open split in direction
+`prefix ctrl + c` | New window
+`prefix ctrl + x` | Close window
+
+I am not a power user, fight me
 
 **nvim**  
 See `which-key` and keybinds files for more info.
