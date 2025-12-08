@@ -49,6 +49,8 @@ cd ~/.config/stn
 ## Keybinds
 
 **General**  
+key | action
+--- | ---
 `super + space` | Open app menu (`:` for clipboard, `>` for runner)
 `super + q` | Quit app
 `super + f` | Toggle fullscreen
@@ -56,6 +58,8 @@ cd ~/.config/stn
 `super + v` | Toggle orientation
 
 **Workspaces**  
+key | action
+--- | ---
 `super + <y,u,i,o,p>` | Cycle main monitor workspaces
 `super + m` | Move to game workspace (see windowrules)
 `super + ctrl + <h,l>` | Focus monitor left/right (check `monitors.conf` & `workspaces.conf`)
