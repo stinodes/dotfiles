@@ -1,4 +1,13 @@
 @define-color primary #2e6f40;
-@define-color bg #0C1D11;
-@define-color selected #183a26;
 @define-color text white;
+@define-color bg #0C1D11;
+@define-color selected-bg #183a26;
+@define-color selected-fg @text;
+@define-color border @bg;
+@define-color keybinds darker(@selected);
+
+* {
+  --border: 4px solid @bg;
+  --outer-radius: 16px;
+  --inner-radius: 8px;
+}

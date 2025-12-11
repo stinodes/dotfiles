@@ -15,11 +15,16 @@
 @define-color distro-fg lighter(@forestgreen);
 
 /* background */
-@define-color layer0 #060e0a;
-@define-color layer1 @darkgreen;
-@define-color layer2 #122b1d;
-@define-color layer3 #183a26;
-@define-color layer4 #1e4830;
+@define-color layer0-bg #060e0a;
+@define-color layer0-fg @text;
+@define-color layer1-fg @text;
+@define-color layer1-bg @darkgreen;
+@define-color layer2-bg #122b1d;
+@define-color layer2-fg @text;
+@define-color layer3-bg #183a26;
+@define-color layer3-fg @text;
+@define-color layer4-bg #1e4830;
+@define-color layer4-fg @text;
 
 @define-color active-bg alpha(white, .2);
 @define-color active-fg @text;

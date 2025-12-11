@@ -14,11 +14,16 @@
 @define-color distro-fg @red;
 
 /* background */
-@define-color layer0 shade(@dark, .5);
-@define-color layer1 shade(@dark, .8);
-@define-color layer2 @dark;
-@define-color layer3 lighter(@dark);
-@define-color layer4 #1e4830;
+@define-color layer0-bg shade(@dark, .5);
+@define-color layer0-fg @text;
+@define-color layer1-bg shade(@dark, .8);
+@define-color layer1-fg @text;
+@define-color layer2-bg @dark;
+@define-color layer2-fg @text;
+@define-color layer3-bg lighter(@dark);
+@define-color layer3-fg @text;
+@define-color layer4-bg #1e4830;
+@define-color layer4-fg @text;
 
 @define-color active-bg alpha(white, .2);
 @define-color active-fg @text;

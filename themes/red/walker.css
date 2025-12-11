@@ -1,4 +1,12 @@
 @define-color primary #CD1C18;
-@define-color bg #252525;
-@define-color selected lighter(@bg);
 @define-color text white;
+@define-color bg #252525;
+@define-color selected-bg lighter(@bg);
+@define-color selected-fg @text;
+@define-color border @bg;
+
+* {
+  --border: 4px solid @bg;
+  --outer-radius: 16px;
+  --inner-radius: 8px;
+}

@@ -1,85 +1,86 @@
 @import "../../../stn/themes/current/walker.css";
 
 * {
-    --outer-radius: 16px;
-    --inner-radius: 8px;
-}
-
-* {
-    all: unset;
-    font-family: FiraCode Nerd Font;
-    font-weight: 600;
-    color: @text;
+  all: unset;
+  font-family: FiraCode Nerd Font;
+  font-weight: 600;
 }
 
 .box-wrapper {
-    border-radius: var(--outer-radius);
-    background: @bg;
+  border-radius: var(--outer-radius);
+  background: @bg;
 }
 
 .box {
-    border: 8px solid alpha(@bg, 0.9);
+  border: var(--border);
 }
 
 .search-container {
-    border-radius: var(--inner-radius);
-    padding: 20px;
-    background: @selected;
-    border-bottom: 3px solid alpha(@selected, 0.9);
-    font-size: 20px;
+  border-radius: var(--inner-radius);
+  padding: 20px;
+  background: @selected-bg;
+  border-bottom: var(--border);
+  font-size: 20px;
 }
 
 .input {
-    outline: none;
-    border: none;
-    box-shadow: none;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  color: @selected-fg;
 }
 
 .input placeholder {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
-child {}
+child {
+}
 
 child:hover .item-box,
 child:selected .item-box {
-    background: @selected;
+  background: @selected-bg;
+}
+
+child:hover .item-text-box,
+child:selected .item-text-box {
+  color: @selected-fg;
 }
 
 .item-box {
-    border-radius: var(--inner-radius);
-    padding: 8px;
-    height: 24px;
+  border-radius: var(--inner-radius);
+  padding: 8px;
 }
 
 .item-text-box {
-    padding-left: 8px;
+  padding-left: 8px;
 }
 
 .item-subtext {
-    font-size: 0;
-    margin: 0;
-    padding: 0;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .keybinds {
-    font-size: 8px;
-    padding: 8px;
-    background: darker(@selected);
-    border-bottom-left-radius: var(--inner-radius);
-    border-bottom-right-radius: var(--inner-radius);
+  font-size: 8px;
+  padding: 8px;
+  background: @footer;
+  border-bottom-left-radius: var(--inner-radius);
+  border-bottom-right-radius: var(--inner-radius);
 }
 
 .global-keybinds,
 .item-keybinds {
-    margin: 0 4px;
+  margin: 0 4px;
 }
 
 .keybind-bind,
 .item-quick-activation {
-    font-size: 10px;
-    opacity: 1;
-    background: @selected;
-    padding: 4px;
-    border-radius: 4px;
+  font-size: 10px;
+  opacity: 1;
+  color: @selected-fg;
+  background: @selected-bg;
+  padding: 4px;
+  border-radius: calc(var(--inner-radius) / 2);
 }

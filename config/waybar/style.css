@@ -1,58 +1,59 @@
 @import "theme.css";
 
 * {
-    min-height: 0;
-    border: none;
-    margin: 0;
-    padding: 0;
+  min-height: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* ----------------------------------------------------- MAIN BACKGROUND --- */
 
-window#waybar>box {
-    background: @layer0;
-    margin: 2px;
+window#waybar > box {
+  background: @layer0-bg;
+  margin: 2px;
 }
 
 /* --------------------------------------------------------- DROP SHADOW --- */
 
 window#waybar {
-    background: @shadow;
+  background: @shadow;
 }
 
 /* ------------------------------------------------------------ TOOLTIPS --- */
 
 tooltip {
-    background: @layer0;
-    border: 1.5px solid @main-br;
-    border-radius: 8px;
+  background: @layer0-bg;
+  border: 1.5px solid @main-br;
+  border-radius: 8px;
 }
 
 tooltip label {
-    color: @text;
-    margin: -1.5px 3px;
+  color: @text;
+  margin: -1.5px 3px;
 }
 
 /* ---------------------------------------- WORKSPACE BUTTONS and LABELS --- */
 
 #workspaces button {
-    color: @module-fg;
-    border-radius: 0;
-    padding: 0 4px;
-    padding-top: 2px;
-    box-shadow: none;
-    transition: none;
+  color: @layer3-fg;
+  border-radius: 0;
+  padding: 0 4px;
+  padding-top: 2px;
+  box-shadow: none;
+  transition: none;
 }
 
 #workspaces button:hover {
-    color: @hover-fg;
-    background: @hover-bg;
-    text-shadow: none;
+  color: @hover-fg;
+  background: @hover-bg;
+  text-shadow: none;
 }
 
 #workspaces button.active {
-    color: @active-fg;
-    background: @active-bg;
+  color: @active-fg;
+  background: @active-bg;
+  font-weight: 800;
 }
 
 /* ------------------------------------------------------------- GENERAL --- */
@@ -69,9 +70,8 @@ tooltip label {
 #backlight,
 #battery,
 #custom-power {
-    opacity: 1;
-    color: @text;
-    padding: 0 4px;
+  opacity: 1;
+  padding: 0 4px;
 }
 
 /* ------------------------------------------------------------- MODULES --- */
@@ -79,123 +79,130 @@ tooltip label {
 /* --------------------------------------------------------- window icon --- */
 
 #custom-ws {
-    background: @custom-ws;
+  background: @custom-ws;
 }
 
 #custom-ws:hover {
-    color: @hover-fg;
+  color: @hover-fg;
 }
 
 /* ---------------------------------------------------------- workspaces --- */
 
 #workspaces {
-    background: @workspaces;
+  background: @layer3-bg;
+  color: @layer3-fg;
 }
 
 #window {
-    background: @window;
+  background: @layer2-bg;
+  color: @layer2-fg;
 }
 
 /* --------------------------------------------------------- temperature --- */
 
 #custom-paddc {
-    padding-right: 22px;
+  padding-right: 22px;
 }
 
 #custom-temperature {
-    background: @temperature;
-    padding: 0 0 0 1px;
+  background: @temperature;
+  padding: 0 0 0 1px;
 }
 
 /* -------------------------------------------------------------- memory --- */
 
 #memory {
-    background: @memory;
-    padding: 0 0 0 1px;
+  background: @memory;
+  padding: 0 0 0 1px;
 }
 
 #memory.warning {
-    color: @warning;
+  color: @warning;
 }
 
 #memory.critical {
-    color: @critical;
+  color: @critical;
 }
 
 /* ----------------------------------------------------------------- cpu --- */
 
 #cpu {
-    background: @cpu;
+  background: @cpu;
 }
 
 /* ---------------------------------------------------------------- time --- */
 #idle_inhibitor {
-    background: @time;
-    padding: 0 0 0 7px;
+  background: @time;
+  padding: 0 0 0 7px;
 }
 
 #idle_inhibitor:hover {
-    color: @hover-fg;
+  color: @hover-fg;
 }
 
 #clock.time {
-    background: @time;
-    margin-left: -2px;
-    padding: 0 3px 0 0;
+  background: @layer0-bg;
+  color: @layer0-fg;
+  margin-left: -2px;
+  padding: 0 3px 0 0;
 }
 
 /* ---------------------------------------------------------------- date --- */
 
 #clock.date {
-    background: @date;
+  background: @layer0-bg;
+  color: @layer0-fg;
 }
 
 #clock.date:hover {
-    color: @hover-fg;
-    background: @hover-bg;
+  color: @hover-fg;
+  background: @hover-bg;
 }
 
 /* ---------------------------------------------------------------- tray --- */
 
 #custom-wifi {
-    background: @netw;
-    padding: 0 8px 0 5px;
+  background: @layer1-bg;
+  color: @layer1-fg;
+  padding: 0 8px 0 5px;
 }
 
 #custom-wifi:hover {
-    color: @hover-fg;
-    background: @hover-bg;
+  color: @hover-fg;
+  background: @hover-bg;
 }
 
 #bluetooth {
-    background: @netw;
-    padding-right: 5px;
+  background: @layer1-bg;
+  color: @layer1-fg;
+  padding-right: 5px;
 }
 
 #bluetooth:hover {
-    color: @hover-fg;
-    background: @hover-bg;
+  color: @hover-fg;
+  background: @hover-bg;
 }
 
 #custom-update {
-    padding-right: 8px;
-    background: @netw;
+  padding-right: 8px;
+  background: @layer1-bg;
+  color: @layer1-fg;
 }
 
 #custom-update:hover {
-    color: @hover-fg;
-    background: @hover-bg;
+  color: @hover-fg;
+  background: @hover-bg;
 }
 
 /* ---------------------------------------------------------- media info --- */
 
 #mpris {
-    background: @layer0;
-    padding: 0 8px 0;
+  background: @layer0-bg;
+  padding: 0 8px 0;
 }
 
 #mpris:hover {
-    color: @hover-fg;
+  color: @hover-fg;
 }
 
 /*
@@ -203,47 +210,50 @@ tooltip label {
 */
 
 #pulseaudio {
-    background: @pulse;
+  background: @layer2-bg;
+  color: @layer2-fg;
 }
 
 #pulseaudio:hover {
-    color: @hover-fg;
-    background: @hover-bg;
+  color: @hover-fg;
+  background: @hover-bg;
 }
 
 /* ---------------------------------------------------------- LAPTOP --- */
 
 #backlight {
-    background: @laptop;
+  background: @layer3-bg;
+  color: @layer3-fg;
 }
 
 #battery {
-    color: @module-fg;
-    background: @laptop;
+  background: @layer3-bg;
+  color: @layer3-fg;
 }
 
 #battery.warning {
-    color: @warning;
+  color: @warning;
 }
 
 #battery.critical {
-    color: @critical;
+  color: @critical;
 }
 
 #battery.charging {
-    color: @charging;
+  color: @charging;
 }
 
 /* -------------------------------------------------------- power button --- */
 
 #custom-power {
-    background: @power;
-    padding: 0 12px;
+  background: @layer3-bg;
+  color: @layer3-fg;
+  padding: 0 12px;
 }
 
 #custom-power:hover {
-    color: @hover-fg;
-    background: @hover-bg;
+  color: @hover-fg;
+  background: @hover-bg;
 }
 
 /* ---------------------------------------------------------- FONT SIZES --- */
@@ -261,65 +271,66 @@ tooltip label {
 */
 
 * {
-    font-family: "FiraCode Nerd Font";
-    font-size: 14px;
-    font-weight: 500;
+  font-family: "FiraCode Nerd Font";
+  font-size: 14px;
+  font-weight: 500;
 }
 
 tooltip label,
 #window label,
-#mpris {}
+#mpris {
+}
 
 /* ----------------------------------------------- left and right arrows --- */
 #custom-left1,
 #custom-left2,
 #custom-left3,
 #custom-left4 {
-    margin-bottom: 0;
-    font-size: 24px;
-    text-shadow: -5px 0 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0;
+  font-size: 24px;
+  text-shadow: -4px 0 3px rgba(0, 0, 0, 0.3);
 }
 
 #custom-right1,
 #custom-right2,
 #custom-right3,
 #custom-right4 {
-    font-size: 24px;
-    margin-bottom: 0;
-    padding-right: 3px;
-    text-shadow: 5px 0 5px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  margin-bottom: 0;
+  padding-right: 3px;
+  text-shadow: 4px 0 3px rgba(0, 0, 0, 0.3);
 }
 
 #custom-left1,
 #custom-right1 {
-    background: @layer0;
-    color: @layer1;
+  background: @layer0-bg;
+  color: @layer1-bg;
 }
 
 #custom-left2,
 #custom-right2 {
-    background: @layer1;
-    color: @layer2;
+  background: @layer1-bg;
+  color: @layer2-bg;
 }
 
 #custom-left3,
 #custom-right3 {
-    background: @layer2;
-    color: @layer3;
+  background: @layer2-bg;
+  color: @layer3-bg;
 }
 
 #custom-left4,
 #custom-right4 {
-    background: @layer3;
-    color: @layer0;
+  background: @layer3-bg;
+  color: @layer0-bg;
 }
 
 /* -------------------------------------------------------------- distro --- */
 
 #custom-distro {
-    color: @distro-fg;
-    margin: 0 8px;
-    padding-left: 3px;
-    font-size: 20px;
-    text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
+  color: @distro-fg;
+  margin: 0 8px;
+  padding-left: 3px;
+  font-size: 20px;
+  text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
 }

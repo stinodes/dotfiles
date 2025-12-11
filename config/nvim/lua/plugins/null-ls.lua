@@ -19,7 +19,7 @@ return {
                     extra_args = { '--dialect', 'postgres' },
                 }),
                 formatting.stylua,
-                -- formatting.tidy,
+                formatting.tidy,
                 formatting.gofmt,
 
                 diagnostics.tidy,

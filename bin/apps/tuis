@@ -8,16 +8,17 @@ function installed {
     stn-is-installed lazygit
     stn-is-installed lazydocker
     stn-is-installed wiremix
+    stn-is-installed neofetch
 }
 
 function install {
-    sudo pacman -S --noconfirm spotify-player bluetui impala bottom lazygit lazydocker wiremix
+    sudo pacman -S --noconfirm spotify-player bluetui impala bottom lazygit lazydocker wiremix neofetch
 }
 
 function uninstall {
-    sudo pacman -R --noconfirm spotify-player bluetui impala bottom lazygit lazydocker wiremix
+    sudo pacman -R --noconfirm spotify-player bluetui impala bottom lazygit lazydocker wiremix neofetch
 }
 
 function setup {
-    exit 0
+    ln -nsf $STN_CONFIG_DIR/neofetch $HOME/.config/neofetch
 }
