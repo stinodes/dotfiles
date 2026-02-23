@@ -12,11 +12,13 @@ function installed {
 }
 
 function install {
-    sudo pacman -S --noconfirm spotify-player bluetui impala bottom lazygit lazydocker wiremix neofetch
+    cargo install spotify_player --features pixelate,notify
+    sudo pacman -S --noconfirm bluetui impala bottom lazygit lazydocker wiremix neofetch
 }
 
 function uninstall {
-    sudo pacman -R --noconfirm spotify-player bluetui impala bottom lazygit lazydocker wiremix neofetch
+    sudo pacman -R --noconfirm bluetui impala bottom lazygit lazydocker wiremix neofetch
+    cargo uninstall spotify_player
 }
 
 function setup {

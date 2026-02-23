@@ -1,0 +1,18 @@
+{
+  "overrides": [
+    {
+      "files": [
+        "*.jsonc",
+        "devcontainer.json",
+        "jsconfig.json",
+        "language-configuration.json",
+        "tsconfig.json"
+      ],
+      "options": {
+        // Use one of the following options
+        "parser": "json",
+        "trailingComma": "none"
+      }
+    }
+  ]
+}

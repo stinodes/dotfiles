@@ -4,49 +4,46 @@
   "mode": "dock",
   "reload_style_on_change": true,
   "gtk-layer-shell": true,
-  "include": [
-      "~/.config/waybar/output.jsonc"
-  ],
+  "include": ["~/.config/waybar/output.jsonc"],
 
   // <<--< Positions >-->>
 
   "modules-left": [
-    "hyprland/workspaces",  // workspaces
+    "hyprland/workspaces", // workspaces
     "custom/right3",
 
-    "hyprland/window",       // window title
+    "hyprland/window", // window title
     "custom/right2",
-    "custom/right1",
+    "custom/right1"
   ],
 
   "modules-center": [
     "custom/paddc",
 
-    "clock#time",           // time
+    "clock#time", // time
 
-    "custom/distro",        // distro icon
+    "custom/distro", // distro icon
 
-    "clock#date"           // date
-
+    "clock#date" // date
   ],
 
   "modules-right": [
-    "mpris",                // media info
+    "mpris", // media info
 
     "custom/left1",
 
-    "custom/wifi",          // wi-fi
-    "bluetooth",            // bluetooth
-    "custom/update",        // system update
+    "custom/wifi", // wi-fi
+    "bluetooth", // bluetooth
+    "custom/update", // system update
 
     "custom/left2",
-    "pulseaudio",           // output device
+    "pulseaudio", // output device
 
     "custom/left3",
-    "backlight",            // brightness
-    "battery",              // battery
+    "backlight", // brightness
+    "battery", // battery
 
-    "custom/power"          // power button
+    "custom/power" // power button
   ],
 
   // <<--< Modules >-->>
@@ -79,63 +76,48 @@
 
     "rewrite": {
       // Desktop
-      "": 
-        "<span foreground='#89b4fa'> </span> Hyprland",
+      "": "<span foreground='#89b4fa'> </span> Hyprland",
 
       // Terminal
       "~": "  Terminal",
       "zsh": "  Terminal",
       "kitty": "  Terminal",
 
-      "tmux(.*)": 
-        "<span foreground='#a6e3a1'> </span> Tmux",
+      "tmux(.*)": "<span foreground='#a6e3a1'> </span> Tmux",
 
       // Browser
 
-      "(.*)Mozilla Firefox": 
-        "<span foreground='#f38ba8'>󰈹 </span> Firefox",
-      "(.*) — Mozilla Firefox": 
-        "<span foreground='#f38ba8'>󰈹 </span> $1",
+      "(.*)Mozilla Firefox": "<span foreground='#f38ba8'>󰈹 </span> Firefox",
+      "(.*) — Mozilla Firefox": "<span foreground='#f38ba8'>󰈹 </span> $1",
 
-      "(.*)Zen Browser": 
-        "<span foreground='#fab387'>󰺕 </span> Zen Browser",
-      "(.*) — Zen Browser": 
-        "<span foreground='#fab387'>󰺕 </span> $1",
+      "(.*)Zen Browser": "<span foreground='#fab387'>󰺕 </span> Zen Browser",
+      "(.*) — Zen Browser": "<span foreground='#fab387'>󰺕 </span> $1",
+
+      "(.*)Brave": "<span foreground='#fab387'> </span> Brave",
+      "(.*) — Brave": "<span foreground='#fab387'> </span> $1",
 
       // Development
 
-      "(.*) - Visual Studio Code": 
-        "<span foreground='#89b4fa'>󰨞 </span> $1",
-      "(.*)Visual Studio Code": 
-        "<span foreground='#89b4fa'>󰨞 </span> Visual Studio Code",
+      "(.*) - Visual Studio Code": "<span foreground='#89b4fa'>󰨞 </span> $1",
+      "(.*)Visual Studio Code": "<span foreground='#89b4fa'>󰨞 </span> Visual Studio Code",
 
-      "nvim": 
-        "<span foreground='#a6e3a1'> </span> Neovim",
-      "nvim (.*)": 
-        "<span foreground='#a6e3a1'> </span> $1",
+      "nvim": "<span foreground='#a6e3a1'> </span> Neovim",
+      "nvim (.*)": "<span foreground='#a6e3a1'> </span> $1",
 
-      "vim": 
-        "<span foreground='#a6e3a1'> </span> Vim",
-      "vim (.*)": 
-        "<span foreground='#a6e3a1'> </span> $1",
+      "vim": "<span foreground='#a6e3a1'> </span> Vim",
+      "vim (.*)": "<span foreground='#a6e3a1'> </span> $1",
 
       // Media
 
-      "(.*)Spotify": 
-        "<span foreground='#a6e3a1'> </span> Spotify",
-      "(.*)Spotify Premium": 
-        "<span foreground='#a6e3a1'> </span> Spotify Premium",
+      "(.*)Spotify": "<span foreground='#a6e3a1'> </span> Spotify",
+      "(.*)Spotify Premium": "<span foreground='#a6e3a1'> </span> Spotify Premium",
 
-      "OBS(.*)": 
-        "<span foreground='#a6adc8'> </span> OBS Studio",
+      "OBS(.*)": "<span foreground='#a6adc8'> </span> OBS Studio",
 
-      "VLC media player": 
-        "<span foreground='#fab387'>󰕼 </span> VLC Media Player",
-      "(.*) - VLC media player": 
-        "<span foreground='#fab387'>󰕼 </span> $1",
+      "VLC media player": "<span foreground='#fab387'>󰕼 </span> VLC Media Player",
+      "(.*) - VLC media player": "<span foreground='#fab387'>󰕼 </span> $1",
 
-      "(.*) - mpv": 
-        "<span foreground='#cba6f7'> </span> $1",
+      "(.*) - mpv": "<span foreground='#cba6f7'> </span> $1",
 
       "qView": "  qView",
 
@@ -145,26 +127,19 @@
 
       // Social
 
-      "vesktop": 
-        "<span foreground='#89b4fa'> </span> Discord",
+      "vesktop": "<span foreground='#89b4fa'> </span> Discord",
 
       "• Discord(.*)": "Discord$1",
-      "(.*)Discord(.*)": 
-        "<span foreground='#89b4fa'> </span> $1Discord$2",
+      "(.*)Discord(.*)": "<span foreground='#89b4fa'> </span> $1Discord$2",
 
       // Documents
 
-      "ONLYOFFICE Desktop Editors": 
-        "<span foreground='#f38ba8'> </span> OnlyOffice Desktop",
+      "ONLYOFFICE Desktop Editors": "<span foreground='#f38ba8'> </span> OnlyOffice Desktop",
 
-      "(.*).docx": 
-        "<span foreground='#89b4fa'> </span> $1.docx",
-      "(.*).xlsx": 
-        "<span foreground='#a6e3a1'> </span> $1.xlsx",
-      "(.*).pptx": 
-        "<span foreground='#fab387'> </span> $1.pptx",
-      "(.*).pdf": 
-        "<span foreground='#f38ba8'> </span> $1.pdf",
+      "(.*).docx": "<span foreground='#89b4fa'> </span> $1.docx",
+      "(.*).xlsx": "<span foreground='#a6e3a1'> </span> $1.xlsx",
+      "(.*).pptx": "<span foreground='#fab387'> </span> $1.pptx",
+      "(.*).pdf": "<span foreground='#f38ba8'> </span> $1.pdf",
 
       // System
       "Authenticate": "  Authenticate"
@@ -239,12 +214,9 @@
       "on-click-right": "mode",
 
       "format": {
-        "months": 
-          "<span color='#b4befe'><b>{}</b></span>",
-        "weekdays": 
-          "<span color='#a6adc8' font='7'>{}</span>",
-        "today": 
-          "<span color='#f38ba8'><b>{}</b></span>"
+        "months": "<span color='#b4befe'><b>{}</b></span>",
+        "weekdays": "<span color='#a6adc8' font='7'>{}</span>",
+        "today": "<span color='#f38ba8'><b>{}</b></span>"
       }
     },
 
@@ -273,16 +245,11 @@
     "format-connected": "󰂱",
     "format-connected-battery": "󰂱",
 
-    "tooltip-format": 
-      "{num_connections} connected",
-    "tooltip-format-disabled": 
-      "Bluetooth Disabled",
-    "tooltip-format-connected": 
-      "{device_enumerate}",
-    "tooltip-format-enumerate-connected": 
-      "{device_alias}",
-    "tooltip-format-enumerate-connected-battery": 
-      ":: {device_alias}: 󱊣 {device_battery_percentage}%",
+    "tooltip-format": "{num_connections} connected",
+    "tooltip-format-disabled": "Bluetooth Disabled",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}",
+    "tooltip-format-enumerate-connected-battery": ":: {device_alias}: 󱊣 {device_battery_percentage}%",
 
     "on-click": "stn-launch-tui bluetui",
     "interval": 1,

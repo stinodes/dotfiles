@@ -1,19 +1,18 @@
 #!/bin/bash
 
 function installed {
-    if stn-is-installed zen || stn-is-installed zen-browser; then
+    if stn-is-installed brave; then
         exit 0
     fi
     exit 1
-
 }
 
 function install {
-    yay -S --noconfirm zen-browser-bin
+    yay -S --noconfirm brave-bin
 }
 
 function uninstall {
-    yay -R --noconfirm zen-browser-bin
+    yay -R --noconfirm brave-bin
 }
 
 function setup {
