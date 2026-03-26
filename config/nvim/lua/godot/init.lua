@@ -1,12 +1,22 @@
-local port = os.getenv("GDScript_Port") or "6005"
-local cmd = vim.lsp.rpc.connect("127.0.0.1", port)
-local pipe = "/tmp/godot.pipe" -- I use /tmp/godot.pipe
+local paths = { '/', '/../' }
+local tmpdir = '/tmp' -- I use /tmp/godot.pipe
+local cwd = vim.fn.getcwd()
 
-vim.lsp.start({
-    name = "Godot",
-    cmd = cmd,
-    root_dir = vim.fs.dirname(vim.fs.find({ "project.godot", ".git" }, { upward = true })[1]),
-    on_attach = function(client, bufnr)
-        vim.api.nvim_command('echo serverstart("' .. pipe .. '")')
-    end,
-})
+local path = ''
+local is_godot = false
+local is_running = false
+
+for _, value in pairs(paths) do
+    if vim.uv.fs_stat(cwd .. value .. 'project.godot') then
+        path = cwd .. value
+        is_godot = true
+        break
+    end
+end
+
+local server = path .. '/server.pipe'
+is_running = vim.uv.fs_stat(server)
+
+if is_godot and not is_running then
+    vim.fn.serverstart(server)
+end

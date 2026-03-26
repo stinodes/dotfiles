@@ -1,5 +1,5 @@
 return {
-    { "nvim-treesitter/nvim-treesitter", branch = 'master', lazy = false, build = ":TSUpdate" },
+    { 'nvim-treesitter/nvim-treesitter', branch = 'master', lazy = false, build = ':TSUpdate' },
     -- Mason
     {
         'mason-org/mason-lspconfig.nvim',
@@ -36,6 +36,8 @@ return {
                     client.server_capabilities.documentFormattingRangeProvider = false
                 end,
             })
+            vim.lsp.config('gdscript', {})
+            vim.lsp.enable('gdscript')
         end,
         opts = {
             ensure_installed = {
