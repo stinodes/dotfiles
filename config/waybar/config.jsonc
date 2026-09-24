@@ -262,7 +262,6 @@
     "return-type": "json",
     "format": "{}",
     "on-click": "hyprctl dispatch exec '~/.config/waybar/scripts/system-update.sh up'",
-    "interval": 30,
     "min-length": 1,
     "max-length": 1
   },

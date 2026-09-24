@@ -1,18 +1,18 @@
 #!/bin/bash
 
 function installed {
-    if stn-is-installed brave; then
+    if stn-is-installed brave-origin; then
         exit 0
     fi
     exit 1
 }
 
 function install {
-    yay -S --noconfirm brave-bin
+    yay -S --noconfirm brave-origin-bin
 }
 
 function uninstall {
-    yay -R --noconfirm brave-bin
+    yay -R --noconfirm brave-origin-bin
 }
 
 function setup {

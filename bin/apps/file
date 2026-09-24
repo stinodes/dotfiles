@@ -1,0 +1,23 @@
+#!/bin/bash
+
+function installed {
+    if stn-is-installed yazi; then
+        exit 0
+    fi
+    exit 1
+}
+
+function install {
+    sudo pacman -S --noconfirm yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick
+}
+
+function uninstall {
+    yay -R --noconfirm yazi
+}
+
+function setup {
+    target=$HOME/.config/yazi
+    stn-backup $target
+    ln -nsf $STN_CONFIG_DIR/yazi $target
+    ln -snf $STN_THEME_CURRENT/yazi.toml $STN_CONFIG_DIR/yazi/theme.toml
+}
